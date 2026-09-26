@@ -311,26 +311,14 @@ canvas.scene { position: absolute; inset: 0; width: 100%; height: 100%; z-index:
 .prose p { color: var(--ivory-dim); max-width: 54ch; }
 .prose .link-arrow { margin-top: 1rem; }
 
-/* ---------- Medallion (CSS 3D coin) ---------- */
+/* ---------- Framed wordmark / photo ---------- */
 .medallion-wrap { perspective: 1400px; display: grid; place-items: center; padding: 2rem 0; position: relative; }
 .frame { position: relative; width: min(100%, 440px); aspect-ratio: 4 / 5; padding: 14px; border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 30% 20%, #2e261b 0%, #17140f 60%, #110f0c 100%); transform-style: preserve-3d; }
 .frame::before { content: ""; position: absolute; inset: 14px; border: 1px solid var(--line-soft); pointer-events: none; z-index: 2; }
 .frame img { position: absolute; inset: 14px; width: calc(100% - 28px); height: calc(100% - 28px); object-fit: cover; z-index: 1; }
-.coin { width: 58%; aspect-ratio: 1; position: relative; transform-style: preserve-3d; animation: coinSpin 14s linear infinite; }
-.coin-face, .coin-edge { position: absolute; inset: 0; border-radius: 50%; backface-visibility: hidden; }
-.coin-face {
-  display: grid; place-items: center;
-  background:
-    radial-gradient(circle at 35% 30%, #f6e3b4 0%, #d6b574 28%, #a8864b 62%, #6f5530 100%);
-  box-shadow: inset 0 0 0 6px rgba(255, 240, 200, 0.18), inset 0 0 0 7px rgba(80, 60, 25, 0.5), inset 0 0 40px rgba(60, 40, 10, 0.55);
-}
-.coin-face::before { content: ""; position: absolute; inset: 11%; border-radius: 50%; border: 1px solid rgba(70, 50, 20, 0.5); box-shadow: 0 0 0 1px rgba(255, 238, 200, 0.25); }
-.coin-face span { font-family: var(--serif); font-size: clamp(4rem, 10vw, 7rem); color: #3e2f17; text-shadow: 0 1px 0 rgba(255, 240, 205, 0.55), 0 -1px 0 rgba(40, 25, 5, 0.35); line-height: 1; }
-.coin-face small { position: absolute; bottom: 18%; font-family: var(--sans); font-size: 0.55rem; letter-spacing: 0.4em; color: #3e2f17; opacity: 0.8; }
-.coin-back { transform: rotateY(180deg); }
-.coin-edge { transform: translateZ(-6px); background: #6f5530; }
-.coin-shadow { position: absolute; bottom: 10%; width: 40%; height: 16px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.65), transparent 70%); animation: shadowPulse 14s linear infinite; }
-@keyframes coinSpin { from { transform: rotateY(0) rotateX(8deg); } to { transform: rotateY(360deg) rotateX(8deg); } }
+.frame-mark { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; text-align: center; }
+.frame-name { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(3rem, 6vw, 4.6rem); line-height: 1; color: var(--gold-soft); }
+.frame-mark small { font-size: 0.66rem; letter-spacing: 0.4em; margin-right: -0.4em; text-transform: uppercase; color: var(--ivory-dim); }
 @keyframes shadowPulse { 0%, 50%, 100% { transform: scaleX(1); } 25%, 75% { transform: scaleX(0.35); } }
 .badge {
   position: absolute; left: -1.5rem; bottom: 3rem; z-index: 3;
