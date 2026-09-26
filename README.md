@@ -26,8 +26,9 @@ Text in English lives in the `EN` dictionary in `assets/main.js`; Albanian is th
 
 ## 3D / motion
 
-- `assets/scene.js` — WebGL (three.js, bundled in `assets/vendor/`): gilded rings + gold dust on the
-  home page, gold dust on the other page headers. Follows the mouse, pauses when off-screen.
+- `assets/scene.js` — WebGL (three.js, bundled in `assets/vendor/`): a candlelit table setting on the
+  home page (porcelain plate on a brass charger, gold cutlery, a glass of red wine, a flickering candle)
+  that slowly turns and follows the mouse; soft warm candlelight bokeh on the other page headers.
 - CSS 3D: letter-by-letter title reveal, word flips on headings, tilt cards with glare, flip cards,
   spinning gold medallion, 3D review carousel, curtain page transitions.
 - Everything is switched off for visitors with "reduce motion" enabled.
