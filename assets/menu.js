@@ -3,13 +3,13 @@
  *
  * Leave empty to show the "menu follows the seasons — call us" panel.
  * Once filled, the page shows tabs per category with the dishes below.
- * Text can be a plain string or { sq: "...", en: "..." } for both languages.
+ * Text can be a plain string or { sq: "...", en: "...", bs: "..." } for each language.
  *
  * Example:
  *   {
- *     category: { sq: "Nga zgara", en: "From the grill" },
+ *     category: { sq: "Nga zgara", en: "From the grill", bs: "Sa roštilja" },
  *     items: [
- *       { name: "Biftek", desc: { sq: "Me perime të pjekura", en: "With roasted vegetables" }, price: "€14" },
+ *       { name: "Biftek", desc: { sq: "Me perime të pjekura", en: "With roasted vegetables", bs: "S pečenim povrćem" }, price: "€14" },
  *     ]
  *   },
  */

@@ -1,6 +1,6 @@
 # Santos — Restaurant website
 
-Static multi-page site for Santos, Reçan (Prizren). Albanian by default with an English toggle.
+Static multi-page site for Santos, Reçan (Prizren). Albanian by default, with English and Bosnian toggles.
 No build step: the `.html` files, `assets/` and `images/` are published as-is to GitHub Pages
 by `.github/workflows/pages.yml` on every push.
 
@@ -19,10 +19,10 @@ by `.github/workflows/pages.yml` on every push.
 | Google reviews (name, rating, date, text) | `assets/reviews.js` — 3+ reviews show as a 3D carousel |
 | Menu (categories, dishes, prices) | `assets/menu.js` — until filled, a "call us" panel shows |
 | Phone + WhatsApp number | `PHONE` and `WHATSAPP` at the top of `assets/main.js` |
-| Opening hours | `Çdo ditë · 10:00 – 23:00` in the HTML files, and `hours.value` in `assets/main.js` (EN) |
+| Opening hours | `Çdo ditë · 10:00 – 23:00` in the HTML files, and `hours.value` in `assets/main.js` (EN + BS) |
 | Photos (optional) | `images/interior.jpg` replaces the Santos wordmark in the photo frames |
 
-Text in English lives in the `EN` dictionary in `assets/main.js`; Albanian is the text in the HTML.
+English and Bosnian text live in the `EN` and `BS` dictionaries in `assets/main.js`; Albanian is the text in the HTML.
 
 ## 3D / motion
 

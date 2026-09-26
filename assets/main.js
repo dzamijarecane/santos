@@ -74,6 +74,70 @@
     "form.help": "Your request opens in WhatsApp; our staff will confirm the booking."
   };
 
+  var BS = {
+    "nav.home": "Početna", "nav.about": "O nama", "nav.kitchen": "Kuhinja", "nav.reviews": "Recenzije", "nav.contact": "Kontakt", "nav.reserve": "Rezerviši",
+    "footer.about": "Elegantan restoran u Rečanu, samo nekoliko minuta od Prizrena.",
+    "footer.rating": "29 recenzija na Googleu", "footer.pages": "Stranice", "footer.contact": "Kontakt", "footer.rights": "Sva prava zadržana.",
+    "hours.value": "Svaki dan · 10:00 – 23:00",
+    "hero.eyebrow": "Restoran · Rečane, Prizren",
+    "hero.sub": "Profinjen ukus i iskreno gostoprimstvo, u miru Rečana.",
+    "hero.rating": "29 recenzija na Googleu", "hero.cta2": "Otkrijte kuhinju",
+    "cta.eyebrow": "Rezervacije", "cta.reserve": "Rezervišite sto", "cta.call": "Pozovite nas",
+    "intro.eyebrow": "Dobrodošli", "intro.title": "Gdje se ukus susreće s elegancijom",
+    "intro.p1": "Santos je mjesto gdje se usporava: pažljivo postavljen sto, jela pripremljena sa strašću i topla atmosfera zbog koje se osjećate dobrodošlo od prvog koraka.",
+    "intro.p2": "Samo nekoliko minuta od Prizrena, u selu Rečane, dočekujemo vas za porodični ručak, mirnu večeru ili vaša najvažnija slavlja.",
+    "intro.link": "Naša priča", "badge.label": "prosječna ocjena na Googleu",
+    "m.1": "Ukus", "m.2": "Elegancija", "m.3": "Gostoprimstvo", "m.4": "Tradicija",
+    "portals.eyebrow": "Otkrijte Santos", "portals.title": "Doživljaj u tri čina",
+    "portals.t1": "Naša priča", "portals.d1": "Ko smo, šta nas inspiriše i zašto nam je svaki detalj važan.",
+    "portals.t2": "Kuhinja", "portals.d2": "Svježe namirnice, recepti usavršeni sa strpljenjem i ukusi koji se pamte.",
+    "portals.t3": "Recenzije", "portals.d3": "4,9 od 5 zvjezdica na Googleu — pročitajte šta kažu naši gosti.",
+    "portals.more": "Otkrijte",
+    "score.of": "od 5 zvjezdica", "score.eyebrow": "Google", "score.title": "Naši gosti govore",
+    "score.text1": "Ocjena", "score.text2": "od 5, na osnovu", "score.text3": "recenzija na Googleu — povjerenje koje zaslužujemo svaki dan.",
+    "score.link": "Sve recenzije",
+    "band.1": "„Dobra hrana je jezik koji razumije svako srce.“",
+    "band.2": "„U Santosu svaki sto ima svoju priču.“",
+    "band.3": "„Kuhanje je ljubav koju možete okusiti.“",
+    "band.4": "„Svaka recenzija nas podsjeća zašto ovo radimo.“",
+    "cta1.title": "Rezervišite svoj sto", "cta1.text": "Za ručak, večeru ili posebno slavlje — pišite nam ili nas pozovite, a mi ćemo se pobrinuti za sve ostalo.",
+    "cta2.title": "Postanite dio naše priče", "cta2.text": "Radujemo se vašem dolasku u Rečane — na obrok, slavlje ili jednostavno lijepu večer.",
+    "cta3.title": "Vaš sto vas čeka", "cta3.text": "Rezervišite unaprijed za večere i grupe — posebno vikendom.",
+    "cta4.title": "Dođite i uvjerite se sami", "cta4.text": "Pridružite se gostima koji su nam dali 4,9 zvjezdica — radujemo se vašem dolasku u Rečane.",
+    "aboutHero.eyebrow": "O nama", "aboutHero.title": "Naša priča", "aboutHero.sub": "Restoran izgrađen na pažnji, ukusu i gostoprimstvu.",
+    "story.eyebrow": "Santos", "story.title": "Sto za kojim je svaki detalj važan",
+    "story.p1": "Santos je nastao iz jednostavne ideje: hrana pripremljena s pažnjom, svježe namirnice i ambijent u kojem se gost osjeća kao kod kuće — samo malo posebnije.",
+    "story.p2": "U miru Rečana, daleko od gradske buke, stvorili smo prostor u kojem vrijeme usporava: za duge razgovore, porodične trpeze i trenutke koje vrijedi pamtiti.",
+    "story.p3": "Svaki gost koji se vrati najljepši je dokaz da smo na pravom putu.",
+    "stats.1": "Ocjena na Googleu", "stats.2": "Recenzije", "stats.3": "Od Prizrena",
+    "values.eyebrow": "Naše vrijednosti", "values.title": "Ono što nas određuje", "values.hint": "Dodirnite za više",
+    "values.t1": "Kvalitet", "values.d1": "Pažljivo odabrane namirnice i standardi koje nikada ne spuštamo — u kuhinji i u sali.",
+    "values.t2": "Tradicija", "values.d2": "Ukusi ovog kraja, sačuvani s poštovanjem i predstavljeni sa savremenim dodirom.",
+    "values.t3": "Gostoprimstvo", "values.d3": "Osmijeh na vratima i pažnja prema svakom detalju — jer je svaki gost poseban.",
+    "kitchenHero.eyebrow": "Kuhinja", "kitchenHero.title": "Umjetnost trpeze", "kitchenHero.sub": "Pripremljeno rukom, posluženo s pažnjom.",
+    "philo.eyebrow": "Filozofija", "philo.title": "Jednostavnost, svježina, karakter",
+    "philo.p1": "Vjerujemo da najbolje jelo počinje pravom namirnicom. Zato biramo svježe proizvode, poštujemo godišnje doba i puštamo ukuse da govore sami za sebe.",
+    "philo.p2": "Od roštilja do specijaliteta kuće, svako jelo pripremamo u trenutku kada ga naručite — sa strpljenjem, umijećem i ljubavlju prema zanatu.",
+    "exp.eyebrow": "Doživljaji", "exp.title": "Za svaku priliku, jedan sto",
+    "exp.t1": "Porodični ručak", "exp.d1": "Veliki stolovi, obilne porcije i ambijent u kojem se i djeca i odrasli osjećaju ugodno.",
+    "exp.t2": "Elegantna večera", "exp.d2": "Meko svjetlo, pažljiva usluga i jela koja večer čine posebnom.",
+    "exp.t3": "Proslave i događaji", "exp.d3": "Rođendani, zaruke, godišnjice — organizujemo svaki detalj kako bi vaše slavlje bilo nezaboravno.",
+    "exp.t4": "Kafa i deserti", "exp.d4": "Slatka pauza tokom dana, uz dobru kafu i nešto posebno uz nju.",
+    "menu.eyebrow": "Meni", "menu.title": "Ukusi Santosa",
+    "menu.emptyTitle": "Naš meni prati godišnja doba",
+    "menu.emptyText": "Naša jela se mijenjaju u skladu s najboljim namirnicama dana. Pitajte naše osoblje za današnje specijalitete ili nas pozovite — rado ćemo vam reći.",
+    "reviewsHero.eyebrow": "Recenzije", "reviewsHero.title": "Riječ naših gostiju", "reviewsHero.sub": "Vaše povjerenje je naša najveća nagrada.",
+    "reviews.read": "Pročitajte na Googleu", "reviews.write": "Ostavite recenziju", "reviews.eyebrow": "Sa Googlea", "reviews.title": "Šta kažu naši gosti",
+    "contactHero.eyebrow": "Kontakt", "contactHero.title": "Posjetite nas", "contactHero.sub": "Radujemo se vašem dolasku u Rečane, samo nekoliko minuta od Prizrena.",
+    "info.eyebrow": "Informacije", "info.title": "Sve što vam treba",
+    "info.address": "Adresa", "info.addressNote": "Put Prizren – Brezovica", "info.hours": "Radno vrijeme", "info.phone": "Telefon", "info.directions": "Upute do nas",
+    "form.eyebrow": "Rezervacija", "form.title": "Rezervišite sto",
+    "form.name": "Ime", "form.date": "Datum", "form.time": "Vrijeme", "form.guests": "Broj osoba", "form.phone": "Vaš telefon",
+    "form.note": "Napomene", "form.notePh": "Rođendan, posebni zahtjevi…", "form.submit": "Pošaljite putem WhatsAppa",
+    "form.help": "Zahtjev se otvara u WhatsAppu; rezervaciju potvrđuje naše osoblje."
+  };
+  var DICTS = { en: EN, bs: BS };
+
   var textNodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
   var phNodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n-ph]"));
   var SQ = {};
@@ -81,18 +145,19 @@
   phNodes.forEach(function (el) { SQ["ph:" + el.dataset.i18nPh] = el.placeholder; });
   var lang = "sq";
 
-  function t(key) { return (lang === "en" ? EN[key] : SQ[key]) || SQ[key] || EN[key] || ""; }
+
 
   function setLang(next) {
-    lang = next === "en" ? "en" : "sq";
+    lang = DICTS[next] ? next : "sq";
+    var dict = DICTS[lang];
     textNodes.forEach(function (el) {
-      var v = lang === "en" ? EN[el.dataset.i18n] : SQ[el.dataset.i18n];
+      var v = dict ? dict[el.dataset.i18n] : SQ[el.dataset.i18n];
       if (!v) return;
       el.textContent = v;
       if (el.classList.contains("split")) splitWords(el, el.classList.contains("in"));
     });
     phNodes.forEach(function (el) {
-      var v = lang === "en" ? EN[el.dataset.i18nPh] : SQ["ph:" + el.dataset.i18nPh];
+      var v = dict ? dict[el.dataset.i18nPh] : SQ["ph:" + el.dataset.i18nPh];
       if (v) el.placeholder = v;
     });
     root.lang = lang;
@@ -123,7 +188,7 @@
 
   var savedLang = null;
   try { savedLang = localStorage.getItem("santos-lang"); } catch (e) {}
-  if (savedLang === "en") setLang("en");
+  if (DICTS[savedLang]) setLang(savedLang);
   document.querySelectorAll("[data-lang]").forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
@@ -487,15 +552,19 @@
       e.preventDefault();
       var f = form.elements;
       if (!f.name.value.trim()) { f.name.focus(); return; }
-      var en = lang === "en";
+      var L = {
+        sq: ["Përshëndetje Santos, dëshiroj të rezervoj një tavolinë.", "Emri: ", "Data: ", "Persona: ", "Telefoni: ", "Shënime: "],
+        en: ["Hello Santos, I would like to reserve a table.", "Name: ", "Date: ", "Guests: ", "Phone: ", "Notes: "],
+        bs: ["Zdravo Santos, želim rezervisati sto.", "Ime: ", "Datum: ", "Broj osoba: ", "Telefon: ", "Napomene: "]
+      }[lang];
       var lines = [
-        en ? "Hello Santos, I would like to reserve a table." : "Përshëndetje Santos, dëshiroj të rezervoj një tavolinë.",
-        (en ? "Name: " : "Emri: ") + f.name.value.trim(),
-        (en ? "Date: " : "Data: ") + f.date.value + " · " + f.time.value,
-        (en ? "Guests: " : "Persona: ") + f.guests.value
+        L[0],
+        L[1] + f.name.value.trim(),
+        L[2] + f.date.value + " · " + f.time.value,
+        L[3] + f.guests.value
       ];
-      if (f.phone.value.trim()) lines.push((en ? "Phone: " : "Telefoni: ") + f.phone.value.trim());
-      if (f.note.value.trim()) lines.push((en ? "Notes: " : "Shënime: ") + f.note.value.trim());
+      if (f.phone.value.trim()) lines.push(L[4] + f.phone.value.trim());
+      if (f.note.value.trim()) lines.push(L[5] + f.note.value.trim());
       window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
     });
   }
