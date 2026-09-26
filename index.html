@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Santos — Restorant · Reçan, Prizren</title>
-  <meta name="description" content="Santos — restorant elegant në Reçan, pranë Prizrenit. Vlerësuar 4.9 nga 5 në Google.">
-  <meta name="theme-color" content="#0f0e0c">
+  <title>Santos — Restorant elegant · Reçan, Prizren</title>
+  <meta name="description" content="Santos — restorant elegant në Reçan, pranë Prizrenit. Vlerësuar 4.9 nga 5 në Google nga 29 mysafirë.">
+  <meta name="theme-color" content="#0d0c0a">
+  <meta property="og:title" content="Santos — Restorant elegant · Reçan, Prizren">
+  <meta property="og:description" content="Santos — restorant elegant në Reçan, pranë Prizrenit. Vlerësuar 4.9 nga 5 në Google nga 29 mysafirë.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.className = "js";</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,16 +23,19 @@
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "reviewCount": "29" }
   }
   </script>
-</head>
-<body>
+</head><body>
+  <div class="curtain" aria-hidden="true"><div class="curtain-brand"><span>S</span><span>A</span><span>N</span><span>T</span><span>O</span><span>S</span></div></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
-    <a href="#top" class="brand" aria-label="Santos">SANTOS</a>
+    <a href="index.html" class="brand" aria-label="Santos">SANTOS</a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#about" data-i18n="nav.about">Rreth nesh</a>
-      <a href="#kitchen" data-i18n="nav.kitchen">Kuzhina</a>
-      <a href="#reviews" data-i18n="nav.reviews">Vlerësimet</a>
-      <a href="#visit" data-i18n="nav.visit">Na vizitoni</a>
+        <a href="index.html" data-i18n="nav.home" aria-current="page">Kreu</a>
+        <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
     </nav>
     <div class="nav-right">
       <div class="lang" role="group" aria-label="Language">
@@ -37,152 +43,183 @@
         <span aria-hidden="true">/</span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a href="#visit" class="btn btn-small" data-i18n="nav.reserve">Rezervo</a>
+      <a href="kontakt.html#rezervo" class="btn btn-small" data-i18n="nav.reserve">Rezervo</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     </div>
+    <nav class="menu" aria-label="Mobile">
+      <a href="index.html" data-i18n="nav.home" aria-current="page">Kreu</a>
+        <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+    </nav>
   </header>
 
-  <main id="top">
-
-    <!-- HERO -->
+  <main>
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="scene" data-scene="rings" aria-hidden="true"></canvas>
       <div class="hero-inner">
         <p class="eyebrow reveal" data-i18n="hero.eyebrow">Restorant · Reçan, Prizren</p>
-        <h1 class="hero-title reveal">Santos</h1>
+        <h1 class="hero-title" aria-label="Santos">SANTOS</h1>
         <div class="ornament reveal" aria-hidden="true"><span></span><i>✦</i><span></span></div>
         <p class="hero-sub reveal" data-i18n="hero.sub">Shije e rafinuar, mikpritje e sinqertë, në qetësinë e Reçanit.</p>
-        <a class="hero-rating reveal" href="#reviews">
+        <a class="hero-rating reveal" href="vleresimet.html">
           <span class="stars" aria-hidden="true">★★★★★</span>
           <span><strong>4.9</strong> / 5 · <span data-i18n="hero.rating">29 vlerësime në Google</span></span>
         </a>
         <div class="hero-cta reveal">
-          <a href="#visit" class="btn" data-i18n="hero.cta1">Rezervo një tavolinë</a>
-          <a href="#kitchen" class="btn btn-ghost" data-i18n="hero.cta2">Zbulo kuzhinën</a>
+          <a href="kontakt.html#rezervo" class="btn" data-i18n="cta.reserve">Rezervo një tavolinë</a>
+          <a href="kuzhina.html" class="btn btn-ghost" data-i18n="hero.cta2">Zbulo kuzhinën</a>
         </div>
       </div>
-      <a href="#about" class="scroll-cue" aria-label="Scroll"><span></span></a>
+      <div class="scroll-cue" aria-hidden="true"><span></span></div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="container split">
-        <div class="about-text reveal">
-          <p class="eyebrow" data-i18n="about.eyebrow">Rreth nesh</p>
-          <h2 data-i18n="about.title">Një tavolinë ku çdo detaj ka rëndësi</h2>
-          <p data-i18n="about.p1">Santos lindi nga një ide e thjeshtë: ushqim i përgatitur me kujdes, përbërës të freskët dhe një ambient ku mysafiri ndihet si në shtëpi — por pak më i veçantë.</p>
-          <p data-i18n="about.p2">Vetëm pak minuta nga Prizreni, në fshatin Reçan, ju mirëpresim për drekë familjare, darkë të qetë apo festimet tuaja më të rëndësishme.</p>
+    <section class="section">
+      <div class="container two">
+        <div class="prose">
+          <p class="eyebrow reveal" data-i18n="intro.eyebrow">Mirë se vini</p>
+          <h2 class="split" data-i18n="intro.title">Aty ku shija takon elegancën</h2>
+          <p class="reveal" data-i18n="intro.p1">Santos është një vend për të ngadalësuar ritmin: një tavolinë e shtruar me kujdes, pjata të përgatitura me pasion dhe një atmosferë e ngrohtë që ju bën të ndiheni të mirëpritur që në hapin e parë.</p>
+          <p class="reveal" data-i18n="intro.p2">Vetëm pak minuta nga Prizreni, në fshatin Reçan, ju presim për drekë familjare, darkë të qetë apo festimet tuaja më të rëndësishme.</p>
+          <a href="rreth-nesh.html" class="link-arrow reveal" data-i18n="intro.link">Historia jonë</a>
         </div>
-        <div class="about-card reveal">
-          <div class="frame">
-            <div class="photo" style="--img:url('../images/interior.jpg')" role="img" aria-label="Santos"></div>
+        <div class="medallion-wrap reveal-3d">
+          <div class="frame tilt" data-tilt="8">
+            <div class="coin" aria-hidden="true">
+              <div class="coin-edge"></div>
+              <div class="coin-face"><span>S</span><small>REÇAN</small></div>
+              <div class="coin-face coin-back"><span>S</span><small>PRIZREN</small></div>
+            </div>
+            <div class="coin-shadow" aria-hidden="true"></div>
+            <img src="images/interior.jpg" alt="Santos" onerror="this.remove()">
+            <span class="glare"></span>
           </div>
-          <div class="stat">
-            <span class="stat-num">4.9</span>
-            <span class="stat-label" data-i18n="about.stat">nota mesatare në Google</span>
+          <div class="badge">
+            <span class="badge-num" data-count="4.9" data-decimals="1">4.9</span>
+            <span class="badge-label" data-i18n="badge.label">nota mesatare në Google</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- KITCHEN -->
-    <section class="section kitchen" id="kitchen">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span data-i18n="m.1">Shije</span><i>✦</i><span data-i18n="m.2">Elegancë</span><i>✦</i><span data-i18n="m.3">Mikpritje</span><i>✦</i><span>Reçan</span><i>✦</i><span data-i18n="m.4">Traditë</span><i>✦</i><span>Prizren</span><i>✦</i>
+        <span data-i18n="m.1">Shije</span><i>✦</i><span data-i18n="m.2">Elegancë</span><i>✦</i><span data-i18n="m.3">Mikpritje</span><i>✦</i><span>Reçan</span><i>✦</i><span data-i18n="m.4">Traditë</span><i>✦</i><span>Prizren</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="section">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="kitchen.eyebrow">Kuzhina</p>
-          <h2 data-i18n="kitchen.title">E përgatitur me dorë, e shërbyer me kujdes</h2>
+        <header class="section-head">
+          <p class="eyebrow reveal" data-i18n="portals.eyebrow">Zbuloni Santos</p>
+          <h2 class="split" data-i18n="portals.title">Një përvojë në tre akte</h2>
         </header>
-        <div class="pillars">
-          <article class="pillar reveal">
-            <span class="pillar-num">I</span>
-            <h3 data-i18n="kitchen.t1">Përbërës të freskët</h3>
-            <p data-i18n="kitchen.d1">Produkte të zgjedhura çdo ditë, me respekt për stinën dhe për shijen e vërtetë.</p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar-num">II</span>
-            <h3 data-i18n="kitchen.t2">Mjeshtëri në kuzhinë</h3>
-            <p data-i18n="kitchen.d2">Receta të kultivuara me durim — nga zgara te pjatat e kuzhinës tonë, secila me karakter.</p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar-num">III</span>
-            <h3 data-i18n="kitchen.t3">Mikpritje e vërtetë</h3>
-            <p data-i18n="kitchen.d3">Shërbim i vëmendshëm dhe i ngrohtë, që e bën çdo vizitë një kujtim të bukur.</p>
-          </article>
+        <div class="cards">
+          <a href="rreth-nesh.html" class="card tilt reveal-3d">
+            <span class="num">I</span>
+            <h3 data-i18n="portals.t1">Historia</h3>
+            <p data-i18n="portals.d1">Kush jemi, çfarë na frymëzon dhe pse çdo detaj ka rëndësi për ne.</p>
+            <span class="link-arrow" data-i18n="portals.more">Më shumë</span>
+            <span class="glare"></span>
+          </a>
+          <a href="kuzhina.html" class="card tilt reveal-3d">
+            <span class="num">II</span>
+            <h3 data-i18n="portals.t2">Kuzhina</h3>
+            <p data-i18n="portals.d2">Përbërës të freskët, receta të kultivuara me durim dhe shije që mbahen mend.</p>
+            <span class="link-arrow" data-i18n="portals.more">Më shumë</span>
+            <span class="glare"></span>
+          </a>
+          <a href="vleresimet.html" class="card tilt reveal-3d">
+            <span class="num">III</span>
+            <h3 data-i18n="portals.t3">Vlerësimet</h3>
+            <p data-i18n="portals.d3">4.9 nga 5 yje në Google — lexoni çfarë thonë mysafirët tanë.</p>
+            <span class="link-arrow" data-i18n="portals.more">Më shumë</span>
+            <span class="glare"></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- QUOTE BAND -->
+    <section class="section">
+      <div class="container showcase">
+        <div class="ring-score reveal-3d" style="--off: 20">
+          <svg viewBox="0 0 320 320" aria-hidden="true">
+            <defs><linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1dcaa"/><stop offset="1" stop-color="#9c7f45"/></linearGradient></defs>
+            <circle class="track" cx="160" cy="160" r="150"/>
+            <circle class="bar" cx="160" cy="160" r="150" pathLength="1000"/>
+          </svg>
+          <div class="inner">
+            <div class="big" data-count="4.9" data-decimals="1">4.9</div>
+            <div class="of" data-i18n="score.of">nga 5 yje</div>
+          </div>
+        </div>
+        <div class="prose">
+          <p class="eyebrow reveal" data-i18n="score.eyebrow">Google</p>
+          <h2 class="split" data-i18n="score.title">Mysafirët tanë flasin</h2>
+          <div class="stars-fill reveal" aria-label="4.9 / 5" style="margin:1.6rem 0 1.2rem">★★★★★</div>
+          <p class="reveal"><span data-i18n="score.text1">Nota</span> <strong>4.9</strong> <span data-i18n="score.text2">nga 5, bazuar në</span> <strong data-count="29">29</strong> <span data-i18n="score.text3">vlerësime në Google — një besim që e fitojmë çdo ditë.</span></p>
+          <a href="vleresimet.html" class="link-arrow reveal" data-i18n="score.link">Të gjitha vlerësimet</a>
+        </div>
+      </div>
+    </section>
     <section class="band">
-      <div class="band-bg" aria-hidden="true"></div>
-      <p class="band-text reveal" data-i18n="band">“Ushqimi i mirë është gjuha që e flet çdo zemër.”</p>
+      <div class="band-bg" data-parallax="0.18" aria-hidden="true"></div>
+      <div class="ornament reveal" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+      <p class="band-text split" data-i18n="band.1">“Ushqimi i mirë është gjuha që e flet çdo zemër.”</p>
     </section>
-
-    <!-- REVIEWS -->
-    <section class="section reviews" id="reviews">
+    <section class="section cta">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="reviews.eyebrow">Vlerësimet</p>
-          <h2 data-i18n="reviews.title">Çfarë thonë mysafirët tanë</h2>
-        </header>
-
-        <div class="score reveal">
-          <div class="score-num">4.9</div>
-          <div class="score-meta">
-            <div class="stars stars-lg" aria-label="4.9 / 5">★★★★★</div>
-            <p><span data-i18n="reviews.based">Bazuar në</span> <strong>29</strong> <span data-i18n="reviews.google">vlerësime në Google</span></p>
-          </div>
-        </div>
-
-        <div class="review-grid" id="review-grid"></div>
-
-        <div class="reviews-cta reveal">
-          <a class="btn btn-ghost" id="google-reviews" href="https://www.google.com/maps/search/?api=1&query=Santos+Re%C3%A7an+Prizren" target="_blank" rel="noopener" data-i18n="reviews.read">Lexo të gjitha vlerësimet në Google</a>
-          <a class="btn" id="google-write" href="https://www.google.com/maps/search/?api=1&query=Santos+Re%C3%A7an+Prizren" target="_blank" rel="noopener" data-i18n="reviews.write">Lër një vlerësim</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section class="section visit" id="visit">
-      <div class="container split">
-        <div class="visit-info reveal">
-          <p class="eyebrow" data-i18n="visit.eyebrow">Na vizitoni</p>
-          <h2 data-i18n="visit.title">Ju presim në Reçan</h2>
-          <dl class="details">
-            <div>
-              <dt data-i18n="visit.address">Adresa</dt>
-              <dd>Reçan, Prizren<br><span class="muted" data-i18n="visit.addressNote">Rruga Prizren – Brezovicë</span></dd>
-            </div>
-            <div>
-              <dt data-i18n="visit.hours">Orari</dt>
-              <dd id="hours" data-i18n="visit.hoursVal">Çdo ditë · 10:00 – 23:00</dd>
-            </div>
-            <div>
-              <dt data-i18n="visit.reserve">Rezervime</dt>
-              <dd><a id="phone-link" href="tel:+38300000000">+383 00 000 000</a></dd>
-            </div>
-          </dl>
-          <div class="visit-cta">
-            <a class="btn" id="call-btn" href="tel:+38300000000" data-i18n="visit.call">Telefono për rezervim</a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Santos+Re%C3%A7an+Prizren" target="_blank" rel="noopener" data-i18n="visit.directions">Merr drejtimet</a>
-          </div>
-        </div>
-        <div class="map reveal">
-          <iframe title="Santos — Reçan, Prizren" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Santos+Re%C3%A7an+Prizren&output=embed"></iframe>
+        <p class="eyebrow reveal" data-i18n="cta.eyebrow">Rezervime</p>
+        <h2 class="split" data-i18n="cta1.title">Rezervoni tavolinën tuaj</h2>
+        <p class="reveal" data-i18n="cta1.text">Për një drekë, një darkë apo një festë të veçantë — na shkruani ose na telefononi dhe ne kujdesemi për gjithçka tjetër.</p>
+        <div class="row reveal">
+          <a href="kontakt.html#rezervo" class="btn" data-i18n="cta.reserve">Rezervo një tavolinë</a>
+          <a data-phone href="tel:+38300000000" class="btn btn-ghost" data-i18n="cta.call">Na telefononi</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="brand">SANTOS</div>
-    <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
-    <p>Reçan, Prizren · Kosovë</p>
-    <p class="muted">© <span id="year"></span> Santos. <span data-i18n="footer.rights">Të gjitha të drejtat e rezervuara.</span></p>
+    <div class="container">
+      <p class="footer-big" aria-hidden="true">SANTOS</p>
+      <div class="footer-grid">
+        <div>
+          <h4>Santos</h4>
+          <p data-i18n="footer.about">Restorant elegant në Reçan, vetëm pak minuta nga Prizreni.</p>
+          <p><span class="stars">★★★★★</span> &nbsp;4.9 · <span data-i18n="footer.rating">29 vlerësime në Google</span></p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.pages">Faqet</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Kreu</a></li>
+            <li><a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a></li>
+            <li><a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a></li>
+            <li><a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a></li>
+            <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <p>Reçan, Prizren</p>
+          <p data-i18n="hours.value" data-hours>Çdo ditë · 10:00 – 23:00</p>
+          <p><a data-phone href="tel:+38300000000">+383 00 000 000</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Santos. <span data-i18n="footer.rights">Të gjitha të drejtat e rezervuara.</span></span>
+        <span>Reçan · Prizren · Kosovë</span>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/reviews.js"></script>
+  <script src="assets/menu.js"></script>
   <script src="assets/main.js"></script>
+  <script type="module" src="assets/scene.js"></script>
 </body>
 </html>

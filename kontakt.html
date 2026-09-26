@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="sq" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt & Rezervime — Santos · Reçan, Prizren</title>
+  <meta name="description" content="Rezervoni tavolinën tuaj në Santos, Reçan, Prizren. Adresa, orari dhe drejtimet.">
+  <meta name="theme-color" content="#0d0c0a">
+  <meta property="og:title" content="Kontakt & Rezervime — Santos · Reçan, Prizren">
+  <meta property="og:description" content="Rezervoni tavolinën tuaj në Santos, Reçan, Prizren. Adresa, orari dhe drejtimet.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.className = "js";</script>
+</head><body>
+  <div class="curtain" aria-hidden="true"><div class="curtain-brand"><span>S</span><span>A</span><span>N</span><span>T</span><span>O</span><span>S</span></div></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="brand" aria-label="Santos">SANTOS</a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html" data-i18n="nav.home">Kreu</a>
+        <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
+        <a href="kontakt.html" data-i18n="nav.contact" aria-current="page">Kontakt</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="sq" aria-pressed="true">SQ</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="kontakt.html#rezervo" class="btn btn-small" data-i18n="nav.reserve">Rezervo</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+    <nav class="menu" aria-label="Mobile">
+      <a href="index.html" data-i18n="nav.home">Kreu</a>
+        <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
+        <a href="kontakt.html" data-i18n="nav.contact" aria-current="page">Kontakt</a>
+      <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="scene" data-scene="dust" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="eyebrow reveal" data-i18n="contactHero.eyebrow">Kontakt</p>
+        <h1 class="split" data-i18n="contactHero.title">Na vizitoni</h1>
+        <div class="ornament reveal" style="margin-top:1.6rem" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        <p class="hero-sub reveal" data-i18n="contactHero.sub">Ju presim në Reçan, vetëm pak minuta nga Prizreni.</p>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span></div>
+    </section>
+
+    <section class="section" id="rezervo">
+      <div class="container two">
+        <div class="prose">
+          <p class="eyebrow reveal" data-i18n="info.eyebrow">Informacion</p>
+          <h2 class="split" data-i18n="info.title">Gjithçka që ju duhet</h2>
+          <dl class="details reveal" style="margin-top:2.4rem">
+            <div>
+              <dt data-i18n="info.address">Adresa</dt>
+              <dd>Reçan, Prizren<br><span class="muted" data-i18n="info.addressNote">Rruga Prizren – Brezovicë</span></dd>
+            </div>
+            <div>
+              <dt data-i18n="info.hours">Orari</dt>
+              <dd data-i18n="hours.value" data-hours>Çdo ditë · 10:00 – 23:00</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.phone">Telefoni</dt>
+              <dd><a data-phone href="tel:+38300000000">+383 00 000 000</a></dd>
+            </div>
+          </dl>
+          <div class="row reveal" style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Santos+Re%C3%A7an+Prizren" target="_blank" rel="noopener" data-i18n="info.directions">Merr drejtimet</a>
+          </div>
+        </div>
+
+        <form class="form reveal-3d" id="reserve-form" novalidate>
+          <div class="full">
+            <p class="eyebrow" style="margin:0" data-i18n="form.eyebrow">Rezervim</p>
+            <h3 data-i18n="form.title">Rezervoni tavolinën</h3>
+          </div>
+          <div class="field full"><label for="f-name" data-i18n="form.name">Emri</label><input id="f-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="f-date" data-i18n="form.date">Data</label><input id="f-date" name="date" type="date" required></div>
+          <div class="field"><label for="f-time" data-i18n="form.time">Ora</label><input id="f-time" name="time" type="time" value="19:00" required></div>
+          <div class="field"><label for="f-guests" data-i18n="form.guests">Persona</label>
+            <select id="f-guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>12+</option></select>
+          </div>
+          <div class="field"><label for="f-phone" data-i18n="form.phone">Telefoni juaj</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field full"><label for="f-note" data-i18n="form.note">Shënime</label><textarea id="f-note" name="note" data-i18n-ph="form.notePh" placeholder="Ditëlindje, kërkesa të veçanta…"></textarea></div>
+          <div class="full"><button class="btn" type="submit" data-i18n="form.submit">Dërgo në WhatsApp</button></div>
+          <p class="note full" data-i18n="form.help">Kërkesa hapet në WhatsApp; rezervimi konfirmohet nga stafi ynë.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="map reveal-3d">
+          <iframe title="Santos — Reçan, Prizren" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Santos+Re%C3%A7an+Prizren&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-big" aria-hidden="true">SANTOS</p>
+      <div class="footer-grid">
+        <div>
+          <h4>Santos</h4>
+          <p data-i18n="footer.about">Restorant elegant në Reçan, vetëm pak minuta nga Prizreni.</p>
+          <p><span class="stars">★★★★★</span> &nbsp;4.9 · <span data-i18n="footer.rating">29 vlerësime në Google</span></p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.pages">Faqet</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Kreu</a></li>
+            <li><a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a></li>
+            <li><a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a></li>
+            <li><a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a></li>
+            <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <p>Reçan, Prizren</p>
+          <p data-i18n="hours.value" data-hours>Çdo ditë · 10:00 – 23:00</p>
+          <p><a data-phone href="tel:+38300000000">+383 00 000 000</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Santos. <span data-i18n="footer.rights">Të gjitha të drejtat e rezervuara.</span></span>
+        <span>Reçan · Prizren · Kosovë</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/reviews.js"></script>
+  <script src="assets/menu.js"></script>
+  <script src="assets/main.js"></script>
+  <script type="module" src="assets/scene.js"></script>
+</body>
+</html>

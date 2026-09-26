@@ -1,16 +1,33 @@
 # Santos — Restaurant website
 
-Static one-page site for Santos, Reçan (Prizren). Albanian by default with an English toggle.
-Open `index.html` directly or host the folder on any static host (e.g. GitHub Pages).
+Static multi-page site for Santos, Reçan (Prizren). Albanian by default with an English toggle.
+No build step: the `.html` files, `assets/` and `images/` are published as-is to GitHub Pages
+by `.github/workflows/pages.yml` on every push.
+
+| Page | File |
+| --- | --- |
+| Home | `index.html` |
+| About | `rreth-nesh.html` |
+| Kitchen & menu | `kuzhina.html` |
+| Reviews | `vleresimet.html` |
+| Contact & reservations | `kontakt.html` |
 
 ## Things to fill in
 
 | What | Where |
 | --- | --- |
-| Google reviews (name, rating, date, text) | `assets/reviews.js` — cards appear automatically |
-| Phone number | `PHONE` at the top of `assets/main.js` |
-| Opening hours | `visit.hoursVal` in `index.html` (SQ) and `assets/main.js` (EN) |
-| Photos | `images/hero.jpg`, `images/interior.jpg`, `images/band.jpg` — optional, the site has elegant fallbacks |
+| Google reviews (name, rating, date, text) | `assets/reviews.js` — 3+ reviews show as a 3D carousel |
+| Menu (categories, dishes, prices) | `assets/menu.js` — until filled, a "call us" panel shows |
+| Phone + WhatsApp number | `PHONE` and `WHATSAPP` at the top of `assets/main.js` |
+| Opening hours | `Çdo ditë · 10:00 – 23:00` in the HTML files, and `hours.value` in `assets/main.js` (EN) |
+| Photos (optional) | `images/interior.jpg` replaces the gold medallion in the photo frames |
 
-The rating (4.9 / 5 from 29 Google reviews) appears in the hero, About, Reviews section and the
-structured data in `index.html` — update those when the count changes.
+Text in English lives in the `EN` dictionary in `assets/main.js`; Albanian is the text in the HTML.
+
+## 3D / motion
+
+- `assets/scene.js` — WebGL (three.js, bundled in `assets/vendor/`): gilded rings + gold dust on the
+  home page, gold dust on the other page headers. Follows the mouse, pauses when off-screen.
+- CSS 3D: letter-by-letter title reveal, word flips on headings, tilt cards with glare, flip cards,
+  spinning gold medallion, 3D review carousel, curtain page transitions.
+- Everything is switched off for visitors with "reduce motion" enabled.
