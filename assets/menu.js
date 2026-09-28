@@ -102,7 +102,43 @@ window.SANTOS_MENU = [
       { name: { sq: "File pule e mbushur e fërguar", bs: "Pohovana rolovana piletina", en: "Stuffed breaded chicken roll" }, price: "6.00 € / 10.00 €" },
       { name: { sq: "File pule e mbushur e skuqur", bs: "Pržena rolovana piletina", en: "Stuffed fried chicken roll" }, price: "6.00 € / 10.00 €" },
       { name: { sq: "Mish pule me salcë të bardhë me kërpudha", bs: "Piletina sa pečurkama u bijelom sosu", en: "Chicken with mushrooms in white sauce" }, price: "5.00 € / 8.00 €" },
-      { name: { sq: "Noazeti mish pule", bs: "Pileći noazeti", en: "Chicken noisettes" }, price: "5.00 € / 8.00 €" }
+      { name: { sq: "Noazeti mish pule", bs: "Pileći noazeti", en: "Chicken noisettes" }, price: "5.00 € / 8.00 €" },
+      {
+        name: { sq: "Gjellë e përzier \u201cUrnebes\u201d", bs: "Urnebes", en: "\u201cUrnebes\u201d mixed dish" },
+        desc: { sq: "Biftek, shampinjonë, kajmak", bs: "Biftek, šampinjoni, kajmak", en: "Beef steak, mushrooms, kajmak" },
+        price: "14.00 €"
+      },
+      {
+        name: { sq: "Biftek me perime të freskëta (mućkalica)", bs: "Mućkalica", en: "Mućkalica" },
+        desc: { sq: "Biftek me perime të freskëta të përziera", bs: "Biftek, svježe povrće", en: "Beef steak with fresh mixed vegetables" },
+        price: "14.00 €"
+      },
+      { name: { sq: "Ramstek \u201cSANTOS\u201d", bs: "Ramstek \u201cSANTOS\u201d", en: "Rump steak \u201cSANTOS\u201d" }, price: "8.00 € / 14.00 €" },
+      { name: { sq: "Ramstek i fërguar", bs: "Pohovani ramstek", en: "Breaded rump steak" }, price: "7.00 € / 12.50 €" },
+      { name: { sq: "File vieneze (bečka)", bs: "Bečka šnicla", en: "Wiener schnitzel (veal)" }, price: "7.00 € / 12.50 €" },
+      { name: { sq: "File pariziene (pariska)", bs: "Pariska šnicla", en: "Veal steak à la parisienne" }, price: "7.00 € / 12.50 €" },
+      { name: { sq: "File nature", bs: "Natur šnicla", en: "Veal steak nature" }, price: "7.50 € / 13.00 €" },
+      { name: { sq: "File nature me salcë të bardhë", bs: "Natur šnicla u bijelom sosu", en: "Veal steak nature in white sauce" }, price: "7.50 € / 13.50 €" },
+      { name: { sq: "Biftek \u201cSANTOS\u201d", bs: "Biftek \u201cSANTOS\u201d", en: "Beef steak \u201cSANTOS\u201d" }, price: "17.00 €" },
+      { name: { sq: "Biftek \u201cStroganoff\u201d", bs: "Biftek sote \u201cStroganoff\u201d", en: "Beef Stroganoff" }, price: "14.00 €" },
+      { name: { sq: "Medalion viçi me kërpudha", bs: "Teleći medaljoni sa pečurkama", en: "Veal medallions with mushrooms" }, price: "8.00 € / 14.50 €" },
+      { name: { sq: "Medalion të mbushur", bs: "Punjeni medaljoni", en: "Stuffed veal medallions" }, price: "8.50 € / 15.50 €" },
+      { name: { sq: "Medalion në salcë të bardhë me kërpudha", bs: "Medaljoni u bijelom sosu sa pečurkama", en: "Veal medallions in white sauce with mushrooms" }, price: "8.00 € / 14.50 €" },
+      { name: { sq: "Biftek i fërguar", bs: "Pohovani biftek", en: "Breaded beef steak" }, price: "16.00 €" },
+      { name: { sq: "Biftek \u201cMonte Karlo\u201d", bs: "Biftek \u201cMonte Karlo\u201d", en: "Beef steak \u201cMonte Carlo\u201d" }, price: "16.00 €" },
+      { name: { sq: "Mish tul (stek)", bs: "Stek", en: "Steak" }, price: "17.00 €" },
+      { name: { sq: "Mish copëz \u201cSharri\u201d", bs: "Šarski odrezak", en: "\u201cSharr\u201d cutlet" }, price: "16.00 €" },
+      { name: { sq: "Biftek \u201cBizmark\u201d", bs: "Biftek \u201cBizmark\u201d", en: "Beef steak \u201cBismarck\u201d" }, price: "16.00 €" }
+    ]
+  },
+  {
+    category: { sq: "Mishra të pjekur", bs: "Pečenja", en: "Roast meat" },
+    items: [
+      { name: { sq: "Mish viçi i pjekur", bs: "Dinstana teletina", en: "Braised veal" }, price: "7.50 € / 13.00 €" },
+      { name: { sq: "Muskuj", bs: "Ribić", en: "Lean beef" }, price: "7.00 € / 12.00 €" },
+      { name: { sq: "Mish viçi i pjekur në zjarr", bs: "Dinstana teletina na žaru", en: "Braised veal finished on the grill" }, price: "7.50 € / 13.00 €" },
+      { name: { sq: "Brinjë viçi", bs: "Teleća rebarca", en: "Veal ribs" }, price: "9.00 € / 14.00 €" },
+      { name: { sq: "Gjuri viçi (200 g)", bs: "Teleća koljenica (200 g)", en: "Veal shank (200 g)" }, price: "11.00 €" }
     ]
   },
   {

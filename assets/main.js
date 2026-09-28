@@ -524,7 +524,7 @@
       menu[idx].items.forEach(function (it, i) {
         var d = document.createElement("div");
         d.className = "dish";
-        d.style.animationDelay = i * 0.06 + "s";
+        d.style.animationDelay = Math.min(i, 8) * 0.05 + "s";
         var top = document.createElement("div");
         top.className = "dish-top";
         var n = document.createElement("span"); n.className = "dish-name"; n.textContent = pick(it.name);
