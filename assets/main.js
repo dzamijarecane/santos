@@ -16,7 +16,7 @@
     "footer.about": "An elegant restaurant in Reçan, just minutes from Prizren.",
     "footer.rating": "29 reviews on Google", "footer.pages": "Pages", "footer.contact": "Contact", "footer.rights": "All rights reserved.",
     "hours.value": "Every day · 10:00 – 23:00",
-    "hero.eyebrow": "Restaurant · Reçan, Prizren",
+    "hero.eyebrow": "Restaurant · Reçan, Prizren · Since 1985",
     "hero.sub": "Refined flavour and heartfelt hospitality, in the calm of Reçan.",
     "hero.rating": "29 reviews on Google", "hero.cta2": "Discover the kitchen",
     "cta.eyebrow": "Reservations", "cta.reserve": "Reserve a table", "cta.call": "Call us",
@@ -46,7 +46,7 @@
     "story.p1": "Santos was born from a simple idea: food prepared with care, fresh ingredients, and a setting where every guest feels at home — only a little more special.",
     "story.p2": "In the calm of Reçan, away from the noise of the city, we have created a place where time slows down: for long conversations, family tables and moments worth remembering.",
     "story.p3": "Every guest who returns is the finest proof that we are on the right path.",
-    "stats.1": "Google rating", "stats.2": "Reviews", "stats.3": "From Prizren",
+    "stats.1": "Google rating", "stats.2": "Reviews", "stats.3": "Since",
     "values.eyebrow": "Our values", "values.title": "What defines us", "values.hint": "Tap to discover",
     "values.t1": "Quality", "values.d1": "Carefully chosen ingredients and standards we never lower — in the kitchen and in the dining room.",
     "values.t2": "Tradition", "values.d2": "The flavours of this land, preserved with respect and presented with a contemporary touch.",
@@ -60,7 +60,7 @@
     "exp.t2": "Elegant dinner", "exp.d2": "Soft light, attentive service and dishes that make the evening special.",
     "exp.t3": "Celebrations & events", "exp.d3": "Birthdays, engagements, anniversaries — we arrange every detail so your celebration is unforgettable.",
     "exp.t4": "Coffee & desserts", "exp.d4": "A sweet pause during the day, with good coffee and something special on the side.",
-    "menu.eyebrow": "The menu", "menu.title": "The flavours of Santos",
+    "menu.eyebrow": "The menu", "menu.note": "Prices in euro (€). Ask our staff about today's dishes.", "menu.title": "The flavours of Santos",
     "menu.emptyTitle": "Our menu follows the seasons",
     "menu.emptyText": "Our dishes change with the best ingredients of the day. Ask our staff about today's specialities, or give us a call — we will gladly tell you.",
     "reviewsHero.eyebrow": "Reviews", "reviewsHero.title": "In our guests' words", "reviewsHero.sub": "Your trust is our greatest reward.",
@@ -79,7 +79,7 @@
     "footer.about": "Elegantan restoran u Rečanu, samo nekoliko minuta od Prizrena.",
     "footer.rating": "29 recenzija na Googleu", "footer.pages": "Stranice", "footer.contact": "Kontakt", "footer.rights": "Sva prava zadržana.",
     "hours.value": "Svaki dan · 10:00 – 23:00",
-    "hero.eyebrow": "Restoran · Rečane, Prizren",
+    "hero.eyebrow": "Restoran · Rečane, Prizren · Od 1985.",
     "hero.sub": "Profinjen ukus i iskreno gostoprimstvo, u miru Rečana.",
     "hero.rating": "29 recenzija na Googleu", "hero.cta2": "Otkrijte kuhinju",
     "cta.eyebrow": "Rezervacije", "cta.reserve": "Rezervišite sto", "cta.call": "Pozovite nas",
@@ -109,7 +109,7 @@
     "story.p1": "Santos je nastao iz jednostavne ideje: hrana pripremljena s pažnjom, svježe namirnice i ambijent u kojem se gost osjeća kao kod kuće — samo malo posebnije.",
     "story.p2": "U miru Rečana, daleko od gradske buke, stvorili smo prostor u kojem vrijeme usporava: za duge razgovore, porodične trpeze i trenutke koje vrijedi pamtiti.",
     "story.p3": "Svaki gost koji se vrati najljepši je dokaz da smo na pravom putu.",
-    "stats.1": "Ocjena na Googleu", "stats.2": "Recenzije", "stats.3": "Od Prizrena",
+    "stats.1": "Ocjena na Googleu", "stats.2": "Recenzije", "stats.3": "Od godine",
     "values.eyebrow": "Naše vrijednosti", "values.title": "Ono što nas određuje", "values.hint": "Dodirnite za više",
     "values.t1": "Kvalitet", "values.d1": "Pažljivo odabrane namirnice i standardi koje nikada ne spuštamo — u kuhinji i u sali.",
     "values.t2": "Tradicija", "values.d2": "Ukusi ovog kraja, sačuvani s poštovanjem i predstavljeni sa savremenim dodirom.",
@@ -123,7 +123,7 @@
     "exp.t2": "Elegantna večera", "exp.d2": "Meko svjetlo, pažljiva usluga i jela koja večer čine posebnom.",
     "exp.t3": "Proslave i događaji", "exp.d3": "Rođendani, zaruke, godišnjice — organizujemo svaki detalj kako bi vaše slavlje bilo nezaboravno.",
     "exp.t4": "Kafa i deserti", "exp.d4": "Slatka pauza tokom dana, uz dobru kafu i nešto posebno uz nju.",
-    "menu.eyebrow": "Meni", "menu.title": "Ukusi Santosa",
+    "menu.eyebrow": "Meni", "menu.note": "Cijene su u eurima (€). Pitajte naše osoblje za jela dana.", "menu.title": "Ukusi Santosa",
     "menu.emptyTitle": "Naš meni prati godišnja doba",
     "menu.emptyText": "Naša jela se mijenjaju u skladu s najboljim namirnicama dana. Pitajte naše osoblje za današnje specijalitete ili nas pozovite — rado ćemo vam reći.",
     "reviewsHero.eyebrow": "Recenzije", "reviewsHero.title": "Riječ naših gostiju", "reviewsHero.sub": "Vaše povjerenje je naša najveća nagrada.",
@@ -147,6 +147,8 @@
 
 
 
+  var langHooks = [];
+
   function setLang(next) {
     lang = DICTS[next] ? next : "sq";
     var dict = DICTS[lang];
@@ -165,6 +167,7 @@
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
     try { localStorage.setItem("santos-lang", lang); } catch (e) {}
+    langHooks.forEach(function (fn) { fn(); });
   }
 
   // ---------------- 3D word split ----------------
@@ -509,8 +512,10 @@
     tabs.setAttribute("role", "tablist");
     var list = document.createElement("div");
     list.className = "menu-list";
+    var current = 0;
     function pick(label) { return typeof label === "string" ? label : (label[lang] || label.sq || label.en || ""); }
     function show(idx) {
+      current = idx;
       tabs.querySelectorAll("button").forEach(function (b, i) { b.setAttribute("aria-selected", String(i === idx)); });
       list.textContent = "";
       menu[idx].items.forEach(function (it, i) {
@@ -538,6 +543,10 @@
     });
     menuRoot.append(tabs, list);
     show(0);
+    langHooks.push(function () {
+      tabs.querySelectorAll("button").forEach(function (b, i) { b.textContent = pick(menu[i].category); });
+      show(current);
+    });
   }
 
   // ---------------- Reservation form → WhatsApp ----------------
