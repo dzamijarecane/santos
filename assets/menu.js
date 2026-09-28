@@ -1,11 +1,37 @@
 /*
  * Menu shown on menu.html — transcribed from the printed Santos menu.
  *
- * Categories appear top to bottom in this order, each with a shortcut at the top of the page.
+ * Categories appear top to bottom in this order as one continuous list (drinks first).
  * Text can be a plain string or { sq: "...", bs: "...", en: "..." } for each language.
  * To add a category, copy one block below and change the text and prices.
  */
 window.SANTOS_MENU = [
+  {
+    category: { sq: "Verërat e bardha", bs: "Bijela vina", en: "White wines" },
+    items: [
+      { name: "Chardonnay", desc: "Plantaže", price: "13.00 €" },
+      { name: "Alexandria", desc: "0.7 l", price: "14.00 €" },
+      { name: "Chardonnay", desc: "Stone Castle", price: "12.00 €" }
+    ]
+  },
+  {
+    category: { sq: "Verërat e kuqe", bs: "Crna vina", en: "Red wines" },
+    items: [
+      { name: "Vranac", price: "13.00 €" },
+      { name: "Vranac Pro Corde", price: "15.00 €" },
+      { name: "Cabernet Sauvignon Reserve", price: "30.00 €" },
+      { name: "T'ga za jug", desc: "0.7 l", price: "14.00 €" },
+      { name: "Cabernet Sauvignon", desc: "Stone Castle", price: "12.00 €" }
+    ]
+  },
+  {
+    category: { sq: "Verë me gotë", bs: "Vino na čašu", en: "Wine by the glass" },
+    items: [
+      { name: "Alexandria", desc: "0.2 l", price: "3.50 €" },
+      { name: "Stone Castle", desc: "0.2 l", price: "3.00 €" },
+      { name: "T'ga za jug", desc: "0.2 l", price: "3.50 €" }
+    ]
+  },
   {
     category: { sq: "Sallatat", bs: "Salate", en: "Salads" },
     items: [
@@ -139,32 +165,6 @@ window.SANTOS_MENU = [
       { name: { sq: "Mish viçi i pjekur në zjarr", bs: "Dinstana teletina na žaru", en: "Braised veal finished on the grill" }, price: "7.50 € / 13.00 €" },
       { name: { sq: "Brinjë viçi", bs: "Teleća rebarca", en: "Veal ribs" }, price: "9.00 € / 14.00 €" },
       { name: { sq: "Gjuri viçi (200 g)", bs: "Teleća koljenica (200 g)", en: "Veal shank (200 g)" }, price: "11.00 €" }
-    ]
-  },
-  {
-    category: { sq: "Verërat e bardha", bs: "Bijela vina", en: "White wines" },
-    items: [
-      { name: "Chardonnay", desc: "Plantaže", price: "13.00 €" },
-      { name: "Alexandria", desc: "0.7 l", price: "14.00 €" },
-      { name: "Chardonnay", desc: "Stone Castle", price: "12.00 €" }
-    ]
-  },
-  {
-    category: { sq: "Verërat e kuqe", bs: "Crna vina", en: "Red wines" },
-    items: [
-      { name: "Vranac", price: "13.00 €" },
-      { name: "Vranac Pro Corde", price: "15.00 €" },
-      { name: "Cabernet Sauvignon Reserve", price: "30.00 €" },
-      { name: "T'ga za jug", desc: "0.7 l", price: "14.00 €" },
-      { name: "Cabernet Sauvignon", desc: "Stone Castle", price: "12.00 €" }
-    ]
-  },
-  {
-    category: { sq: "Verë me gotë", bs: "Vino na čašu", en: "Wine by the glass" },
-    items: [
-      { name: "Alexandria", desc: "0.2 l", price: "3.50 €" },
-      { name: "Stone Castle", desc: "0.2 l", price: "3.00 €" },
-      { name: "T'ga za jug", desc: "0.2 l", price: "3.50 €" }
     ]
   }
 ];

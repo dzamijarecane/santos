@@ -62,7 +62,7 @@
     "exp.t4": "Coffee & desserts", "exp.d4": "A sweet pause during the day, with good coffee and something special on the side.",
     "menu.eyebrow": "The menu", "menu.cta": "View the menu",
     "menu.teaser": "Over 90 dishes — salads, starters, grill specialities, roast meats and selected wines.",
-    "menuHero.eyebrow": "Menu", "menuHero.title": "The flavours of Santos", "menuHero.sub": "From salads to house specialities — our whole menu in one place.", "menu.note": "Prices in euro (€). Ask our staff about today's dishes.", "menu.title": "The flavours of Santos",
+    "menuHero.eyebrow": "Menu", "menuHero.title": "The flavours of Santos", "menuHero.sub": "From wines to house specialities — our whole menu in one place.", "menu.note": "Prices in euro (€). Ask our staff about today's dishes.", "menu.title": "The flavours of Santos",
     "menu.emptyTitle": "Our menu follows the seasons",
     "menu.emptyText": "Our dishes change with the best ingredients of the day. Ask our staff about today's specialities, or give us a call — we will gladly tell you.",
     "reviewsHero.eyebrow": "Reviews", "reviewsHero.title": "In our guests' words", "reviewsHero.sub": "Your trust is our greatest reward.",
@@ -127,7 +127,7 @@
     "exp.t4": "Kafa i deserti", "exp.d4": "Slatka pauza tokom dana, uz dobru kafu i nešto posebno uz nju.",
     "menu.eyebrow": "Meni", "menu.cta": "Pogledajte meni",
     "menu.teaser": "Preko 90 jela — salate, predjela, specijaliteti sa roštilja, pečenja i odabrana vina.",
-    "menuHero.eyebrow": "Meni", "menuHero.title": "Ukusi Santosa", "menuHero.sub": "Od salata do specijaliteta kuće — cijeli naš meni na jednom mjestu.", "menu.note": "Cijene su u eurima (€). Pitajte naše osoblje za jela dana.", "menu.title": "Ukusi Santosa",
+    "menuHero.eyebrow": "Meni", "menuHero.title": "Ukusi Santosa", "menuHero.sub": "Od vina do specijaliteta kuće — cijeli naš meni na jednom mjestu.", "menu.note": "Cijene su u eurima (€). Pitajte naše osoblje za jela dana.", "menu.title": "Ukusi Santosa",
     "menu.emptyTitle": "Naš meni prati godišnja doba",
     "menu.emptyText": "Naša jela se mijenjaju u skladu s najboljim namirnicama dana. Pitajte naše osoblje za današnje specijalitete ili nas pozovite — rado ćemo vam reći.",
     "reviewsHero.eyebrow": "Recenzije", "reviewsHero.title": "Riječ naših gostiju", "reviewsHero.sub": "Vaše povjerenje je naša najveća nagrada.",
@@ -290,7 +290,6 @@
     var y = window.scrollY;
     nav.classList.toggle("scrolled", y > 40);
     nav.classList.toggle("hide", y > lastY && y > 400 && !document.body.classList.contains("menu-open"));
-    document.body.classList.toggle("nav-hidden", nav.classList.contains("hide"));
     lastY = y;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     if (progress) progress.style.transform = "scaleX(" + (max > 0 ? y / max : 0) + ")";
@@ -507,31 +506,17 @@
     wrap.addEventListener("pointercancel", end);
   }
 
-  // ---------------- Menu (menu.html: all sections on one page) ----------------
+  // ---------------- Menu (menu.html: one continuous list) ----------------
   var menuRoot = document.getElementById("menu-root");
-  var jump = document.getElementById("menu-jump");
   var menu = (window.SANTOS_MENU || []).filter(function (c) { return c && c.items && c.items.length; });
   if (menuRoot && menu.length) {
     var pick = function (label) { return typeof label === "string" ? label : (label[lang] || label.sq || label.en || ""); };
-    var sections = [];
-    var links = [];
-
     var renderMenu = function () {
       menuRoot.textContent = "";
-      if (jump) jump.textContent = "";
-      sections = [];
-      links = [];
-      menu.forEach(function (cat, ci) {
-        var id = "m-" + (ci + 1);
-        var sec = document.createElement("section");
-        sec.className = "menu-cat";
-        sec.id = id;
+      menu.forEach(function (cat) {
         var h = document.createElement("h2");
         h.className = "menu-cat-title";
-        var num = document.createElement("span");
-        num.className = "menu-cat-num";
-        num.textContent = (ci + 1 < 10 ? "0" : "") + (ci + 1);
-        h.append(num, document.createTextNode(pick(cat.category)));
+        h.textContent = pick(cat.category);
         var list = document.createElement("div");
         list.className = "menu-list";
         cat.items.forEach(function (it) {
@@ -547,45 +532,9 @@
           if (it.desc) { var ds = document.createElement("p"); ds.textContent = pick(it.desc); d.appendChild(ds); }
           list.appendChild(d);
         });
-        sec.append(h, list);
-        menuRoot.appendChild(sec);
-        sections.push(sec);
-        if (jump) {
-          var a = document.createElement("a");
-          a.href = "#" + id;
-          a.textContent = pick(cat.category);
-          jump.appendChild(a);
-          links.push(a);
-        }
+        menuRoot.append(h, list);
       });
-      markActive();
     };
-
-    var active = -1;
-    var markActive = function () {
-      if (!jump || !sections.length) return;
-      var line = jump.getBoundingClientRect().bottom + 24;
-      var idx = 0;
-      sections.forEach(function (sec, i) { if (sec.getBoundingClientRect().top <= line) idx = i; });
-      if (idx === active && links[idx] && links[idx].classList.contains("active")) return;
-      active = idx;
-      links.forEach(function (l, i) { l.classList.toggle("active", i === idx); });
-      var l = links[idx];
-      if (l && jump.scrollWidth > jump.clientWidth) jump.scrollTo({ left: l.offsetLeft - jump.clientWidth / 2 + l.offsetWidth / 2, behavior: "smooth" });
-    };
-
-    if (jump) {
-      jump.addEventListener("click", function (e) {
-        var a = e.target.closest("a");
-        if (!a) return;
-        e.preventDefault();
-        var target = document.querySelector(a.getAttribute("href"));
-        var offset = jump.getBoundingClientRect().height + (nav.classList.contains("hide") ? 0 : nav.offsetHeight) + 12;
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: reduced ? "auto" : "smooth" });
-      });
-      window.addEventListener("scroll", markActive, { passive: true });
-    }
-
     renderMenu();
     langHooks.push(renderMenu);
   }
