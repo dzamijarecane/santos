@@ -2,8 +2,8 @@
   "use strict";
 
   // ---- Business details: edit these in one place ----
-  var PHONE = "+383 00 000 000";     // TODO: the restaurant's real phone number
-  var WHATSAPP = "38300000000";      // TODO: same number, digits only, for WhatsApp reservations
+  var PHONE = "+383 45 949 002";
+  var WHATSAPP = "38345949002";      // same number, digits only, for WhatsApp
 
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var root = document.documentElement;
@@ -70,9 +70,9 @@
     "contactHero.eyebrow": "Contact", "contactHero.title": "Visit us", "contactHero.sub": "We look forward to welcoming you in Reçan, just minutes from Prizren.",
     "info.eyebrow": "Information", "info.title": "Everything you need",
     "info.address": "Address", "info.addressNote": "Prizren – Brezovica road", "info.hours": "Hours", "info.phone": "Phone", "info.directions": "Get directions",
-    "form.eyebrow": "Reservation", "form.title": "Reserve your table",
+    "form.eyebrow": "Reservation", "form.title": "Reserve your table", "form.text": "Message us on WhatsApp and we will confirm your booking as soon as possible.",
     "form.name": "Name", "form.date": "Date", "form.time": "Time", "form.guests": "Guests", "form.phone": "Your phone",
-    "form.note": "Notes", "form.notePh": "Birthday, special requests…", "form.submit": "Send via WhatsApp",
+    "form.note": "Notes", "form.notePh": "Birthday, special requests…", "form.submit": "Book on WhatsApp",
     "form.help": "Your request opens in WhatsApp; our staff will confirm the booking."
   };
 
@@ -135,9 +135,9 @@
     "contactHero.eyebrow": "Kontakt", "contactHero.title": "Posjetite nas", "contactHero.sub": "Radujemo se vašem dolasku u Rečane, samo nekoliko minuta od Prizrena.",
     "info.eyebrow": "Informacije", "info.title": "Sve što vam treba",
     "info.address": "Adresa", "info.addressNote": "Put Prizren – Brezovica", "info.hours": "Radno vrijeme", "info.phone": "Telefon", "info.directions": "Upute do nas",
-    "form.eyebrow": "Rezervacija", "form.title": "Rezervišite sto",
+    "form.eyebrow": "Rezervacija", "form.title": "Rezervišite sto", "form.text": "Pišite nam na WhatsApp i potvrdit ćemo vašu rezervaciju što prije.",
     "form.name": "Ime", "form.date": "Datum", "form.time": "Vrijeme", "form.guests": "Broj osoba", "form.phone": "Vaš telefon",
-    "form.note": "Napomene", "form.notePh": "Rođendan, posebni zahtjevi…", "form.submit": "Pošaljite putem WhatsAppa",
+    "form.note": "Napomene", "form.notePh": "Rođendan, posebni zahtjevi…", "form.submit": "Rezervišite putem WhatsAppa",
     "form.help": "Zahtjev se otvara u WhatsAppu; rezervaciju potvrđuje naše osoblje."
   };
   var DICTS = { en: EN, bs: BS };
@@ -204,7 +204,7 @@
   var tel = "tel:" + PHONE.replace(/\s+/g, "");
   document.querySelectorAll("[data-phone]").forEach(function (a) {
     a.href = tel;
-    if (!a.dataset.i18n) a.textContent = PHONE;
+    if (!a.dataset.i18n && !a.children.length) a.textContent = PHONE;
   });
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
@@ -539,34 +539,24 @@
     langHooks.push(renderMenu);
   }
 
-  // ---------------- Reservation form → WhatsApp ----------------
-  var form = document.getElementById("reserve-form");
-  if (form) {
-    var dateInput = form.querySelector("[name=date]");
-    var today = new Date();
-    var iso = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-    dateInput.min = iso;
-    if (!dateInput.value) dateInput.value = iso;
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var f = form.elements;
-      if (!f.name.value.trim()) { f.name.focus(); return; }
-      var L = {
-        sq: ["Përshëndetje Santos, dëshiroj të rezervoj një tavolinë.", "Emri: ", "Data: ", "Persona: ", "Telefoni: ", "Shënime: "],
-        en: ["Hello Santos, I would like to reserve a table.", "Name: ", "Date: ", "Guests: ", "Phone: ", "Notes: "],
-        bs: ["Zdravo Santos, želim rezervisati sto.", "Ime: ", "Datum: ", "Broj osoba: ", "Telefon: ", "Napomene: "]
-      }[lang];
-      var lines = [
-        L[0],
-        L[1] + f.name.value.trim(),
-        L[2] + f.date.value + " · " + f.time.value,
-        L[3] + f.guests.value
-      ];
-      if (f.phone.value.trim()) lines.push(L[4] + f.phone.value.trim());
-      if (f.note.value.trim()) lines.push(L[5] + f.note.value.trim());
-      window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+  // ---------------- Reservations → WhatsApp ----------------
+  // Every "Reserve" link and WhatsApp button opens a chat with a greeting in the visitor's language.
+  var GREETING = {
+    sq: "Përshëndetje Santos, dëshiroj të rezervoj një tavolinë.",
+    en: "Hello Santos, I would like to reserve a table.",
+    bs: "Zdravo Santos, želim rezervisati sto."
+  };
+  var waLinks = document.querySelectorAll('[data-wa], a[href="kontakt.html#rezervo"]');
+  function updateWhatsApp() {
+    var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(GREETING[lang] || GREETING.sq);
+    waLinks.forEach(function (a) {
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener";
     });
   }
+  updateWhatsApp();
+  langHooks.push(updateWhatsApp);
 
   onScroll();
 })();
