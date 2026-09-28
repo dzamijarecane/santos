@@ -20,14 +20,13 @@ by `.github/workflows/pages.yml` on every push.
 | Menu (categories, dishes, prices) | `assets/menu.js` — until filled, a "call us" panel shows |
 | Phone + WhatsApp number | `PHONE` and `WHATSAPP` at the top of `assets/main.js` |
 | Opening hours | `Çdo ditë · 10:00 – 23:00` in the HTML files, and `hours.value` in `assets/main.js` (EN + BS) |
-| Photos (optional) | `images/interior.jpg` replaces the Santos wordmark in the photo frames |
+| Photos | drop JPGs into `images/` with these names — each replaces a toned placeholder panel: `hero` (home header), `about`, `kitchen`, `reviews`, `contact` (page headers + home tiles), `interior`, `dish` (side-by-side sections), `band` (quote strips). Landscape, ~2000px wide works best. |
 
 English and Bosnian text live in the `EN` and `BS` dictionaries in `assets/main.js`; Albanian is the text in the HTML.
 
-## 3D / motion
+## Motion
 
-- `assets/scene.js` — WebGL (three.js, bundled in `assets/vendor/`): soft, warm candlelight bokeh
-  drifting behind the page headers, following the mouse.
-- CSS 3D: letter-by-letter title reveal, word flips on headings, tilt cards with glare, flip cards,
-  3D review carousel, curtain page transitions.
+- Headings rise in word by word, sections fade up as you scroll, the home title slides in letter by letter.
+- Header photos slowly zoom out on load; photo tiles zoom on hover.
+- 3D review carousel (drag or use the arrows) once `assets/reviews.js` has 3+ reviews.
 - Everything is switched off for visitors with "reduce motion" enabled.

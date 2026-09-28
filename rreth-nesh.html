@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rreth nesh — Santos · Reçan, Prizren</title>
   <meta name="description" content="Historia e restorantit Santos në Reçan, Prizren.">
-  <meta name="theme-color" content="#0d0c0a">
+  <meta name="theme-color" content="#0e0e0e">
   <meta property="og:title" content="Rreth nesh — Santos · Reçan, Prizren">
   <meta property="og:description" content="Historia e restorantit Santos në Reçan, Prizren.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
   <script>document.documentElement.className = "js";</script>
 </head><body>
-  <div class="curtain" aria-hidden="true"><div class="curtain-brand"><span>S</span><span>A</span><span>N</span><span>T</span><span>O</span><span>S</span></div></div>
-  <div class="progress" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
+  <div class="topbar">
+    <a href="vleresimet.html" class="topbar-rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.9</strong> · <span data-i18n="hero.rating">29 vlerësime në Google</span></a>
+    <span class="topbar-place">Reçan · Prizren</span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="sq" aria-pressed="true">SQ</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="bs" aria-pressed="false">BS</button>
+    </div>
+  </div>
 
   <header class="nav" id="nav">
     <a href="index.html" class="brand" aria-label="Santos">SANTOS</a>
@@ -29,14 +35,7 @@
         <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="sq" aria-pressed="true">SQ</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-lang="bs" aria-pressed="false">BS</button>
-      </div>
-      <a href="kontakt.html#rezervo" class="btn btn-small" data-i18n="nav.reserve">Rezervo</a>
+      <a href="kontakt.html#rezervo" class="btn btn-dark" data-i18n="nav.reserve">Rezervo</a>
       <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     </div>
     <nav class="menu" aria-label="Mobile">
@@ -45,25 +44,23 @@
         <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
         <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
         <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
-      <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+      <a href="kontakt.html#rezervo" class="btn btn-dark" data-i18n="cta.reserve">Rezervo një tavolinë</a>
     </nav>
   </header>
 
   <main>
     <section class="hero page-hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <canvas class="scene" data-scene="glow" aria-hidden="true"></canvas>
-      <div class="hero-inner">
+      <div class="media tone-1 hero-media"><img src="images/about.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-content">
         <p class="eyebrow reveal" data-i18n="aboutHero.eyebrow">Rreth nesh</p>
         <h1 class="split" data-i18n="aboutHero.title">Historia jonë</h1>
-        <div class="ornament reveal" style="margin-top:1.6rem" aria-hidden="true"><span></span><i>✦</i><span></span></div>
         <p class="hero-sub reveal" data-i18n="aboutHero.sub">Një restorant i ndërtuar mbi kujdesin, shijen dhe mikpritjen.</p>
       </div>
-      <div class="scroll-cue" aria-hidden="true"><span></span></div>
     </section>
-
     <section class="section">
-      <div class="container two">
+      <div class="container split-grid">
+        <div class="split-media reveal"><div class="media tone-4"><img src="images/interior.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
         <div class="prose">
           <p class="eyebrow reveal" data-i18n="story.eyebrow">Santos</p>
           <h2 class="split" data-i18n="story.title">Një tavolinë ku çdo detaj ka rëndësi</h2>
@@ -71,21 +68,10 @@
           <p class="reveal" data-i18n="story.p2">Në qetësinë e Reçanit, larg zhurmës së qytetit, kemi krijuar një hapësirë ku koha ngadalësohet: për biseda të gjata, për tryeza familjare dhe për momente që ia vlen t'i kujtosh.</p>
           <p class="reveal" data-i18n="story.p3">Çdo mysafir që kthehet është dëshmia më e bukur se jemi në rrugën e duhur.</p>
         </div>
-        <div class="medallion-wrap reveal-3d">
-          <div class="frame tilt" data-tilt="8">
-            <div class="frame-mark" aria-hidden="true">
-              <span class="frame-name">Santos</span>
-              <div class="ornament"><span></span><i>✦</i><span></span></div>
-              <small>Reçan · Prizren</small>
-            </div>
-            <img src="images/interior.jpg" alt="Santos" onerror="this.remove()">
-            <span class="glare"></span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="section-alt">
+    <section class="stats-band">
       <div class="container stats">
         <div class="stat reveal"><span class="stat-num" data-count="4.9" data-decimals="1">4.9</span><span class="stat-label" data-i18n="stats.1">Nota në Google</span></div>
         <div class="stat reveal"><span class="stat-num" data-count="29">29</span><span class="stat-label" data-i18n="stats.2">Vlerësime</span></div>
@@ -99,42 +85,31 @@
           <p class="eyebrow reveal" data-i18n="values.eyebrow">Vlerat tona</p>
           <h2 class="split" data-i18n="values.title">Ajo që na përcakton</h2>
         </header>
-        <div class="flips">
-          <div class="flip-card reveal-3d" tabindex="0">
-            <div class="flip-inner">
-              <div class="flip-face flip-front"><span class="num">I</span><h3 data-i18n="values.t1">Cilësi</h3><small data-i18n="values.hint">Prekni për më shumë</small></div>
-              <div class="flip-face flip-back"><h3 data-i18n="values.t1">Cilësi</h3><p data-i18n="values.d1">Përbërës të zgjedhur me kujdes dhe standarde që nuk i ulim kurrë — në kuzhinë dhe në sallë.</p></div>
-            </div>
-          </div>
-          <div class="flip-card reveal-3d" tabindex="0">
-            <div class="flip-inner">
-              <div class="flip-face flip-front"><span class="num">II</span><h3 data-i18n="values.t2">Traditë</h3><small data-i18n="values.hint">Prekni për më shumë</small></div>
-              <div class="flip-face flip-back"><h3 data-i18n="values.t2">Traditë</h3><p data-i18n="values.d2">Shijet e kësaj toke, të ruajtura me respekt dhe të paraqitura me një prekje bashkëkohore.</p></div>
-            </div>
-          </div>
-          <div class="flip-card reveal-3d" tabindex="0">
-            <div class="flip-inner">
-              <div class="flip-face flip-front"><span class="num">III</span><h3 data-i18n="values.t3">Mikpritje</h3><small data-i18n="values.hint">Prekni për më shumë</small></div>
-              <div class="flip-face flip-back"><h3 data-i18n="values.t3">Mikpritje</h3><p data-i18n="values.d3">Një buzëqeshje në derë dhe vëmendje në çdo detaj — sepse çdo mysafir është i veçantë.</p></div>
-            </div>
-          </div>
+        <div class="values">
+          <article class="value reveal"><span class="value-num">01</span><h3 data-i18n="values.t1">Cilësi</h3><p data-i18n="values.d1">Përbërës të zgjedhur me kujdes dhe standarde që nuk i ulim kurrë — në kuzhinë dhe në sallë.</p></article>
+          <article class="value reveal"><span class="value-num">02</span><h3 data-i18n="values.t2">Traditë</h3><p data-i18n="values.d2">Shijet e kësaj toke, të ruajtura me respekt dhe të paraqitura me një prekje bashkëkohore.</p></article>
+          <article class="value reveal"><span class="value-num">03</span><h3 data-i18n="values.t3">Mikpritje</h3><p data-i18n="values.d3">Një buzëqeshje në derë dhe vëmendje në çdo detaj — sepse çdo mysafir është i veçantë.</p></article>
         </div>
       </div>
     </section>
 
     <section class="band">
-      <div class="band-bg" data-parallax="0.18" aria-hidden="true"></div>
-      <div class="ornament reveal" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+      <div class="media tone-2 band-media"><img src="images/band.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
       <p class="band-text split" data-i18n="band.2">“Në Santos, çdo tavolinë ka një histori.”</p>
     </section>
     <section class="section cta">
-      <div class="container">
-        <p class="eyebrow reveal" data-i18n="cta.eyebrow">Rezervime</p>
-        <h2 class="split" data-i18n="cta2.title">Bëhuni pjesë e historisë sonë</h2>
-        <p class="reveal" data-i18n="cta2.text">Ju presim në Reçan — për një vakt, për një festë, ose thjesht për një mbrëmje të bukur.</p>
-        <div class="row reveal">
-          <a href="kontakt.html#rezervo" class="btn" data-i18n="cta.reserve">Rezervo një tavolinë</a>
-          <a data-phone href="tel:+38300000000" class="btn btn-ghost" data-i18n="cta.call">Na telefononi</a>
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow reveal" data-i18n="cta.eyebrow">Rezervime</p>
+          <h2 class="split" data-i18n="cta2.title">Bëhuni pjesë e historisë sonë</h2>
+        </div>
+        <div>
+          <p class="reveal" data-i18n="cta2.text">Ju presim në Reçan — për një vakt, për një festë, ose thjesht për një mbrëmje të bukur.</p>
+          <div class="row reveal">
+            <a href="kontakt.html#rezervo" class="btn btn-dark" data-i18n="cta.reserve">Rezervo një tavolinë</a>
+            <a data-phone href="tel:+38300000000" class="btn btn-outline" data-i18n="cta.call">Na telefononi</a>
+          </div>
         </div>
       </div>
     </section>
@@ -142,7 +117,10 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer-big" aria-hidden="true">SANTOS</p>
+      <div class="footer-top">
+        <a href="index.html" class="brand">SANTOS</a>
+        <a href="kontakt.html#rezervo" class="btn btn-light" data-i18n="cta.reserve">Rezervo një tavolinë</a>
+      </div>
       <div class="footer-grid">
         <div>
           <h4>Santos</h4>
@@ -176,6 +154,5 @@
   <script src="assets/reviews.js"></script>
   <script src="assets/menu.js"></script>
   <script src="assets/main.js"></script>
-  <script type="module" src="assets/scene.js"></script>
 </body>
 </html>

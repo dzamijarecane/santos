@@ -222,10 +222,10 @@
     heroTitle.querySelectorAll(".ch").forEach(function (s, i) {
       s.animate(
         [
-          { opacity: 0, transform: "translateY(60px) rotateX(-90deg) rotateY(" + (i % 2 ? 25 : -25) + "deg)", filter: "blur(8px)" },
-          { opacity: 1, transform: "none", filter: "blur(0)" }
+          { opacity: 0, transform: "translateY(40%)" },
+          { opacity: 1, transform: "none" }
         ],
-        { duration: 1500, delay: 120 + i * 90, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "both" }
+        { duration: 1200, delay: 150 + i * 70, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "both" }
       );
     });
   }
@@ -325,7 +325,7 @@
     var els = document.querySelectorAll(".reveal, .reveal-3d, .split, .line-grow, .ring-score, .stars-fill, [data-count]");
     if (!io) { els.forEach(function (el) { el.classList.add("in"); }); return; }
     // stagger siblings that enter together
-    document.querySelectorAll(".cards, .flips, .stats, .hero-inner").forEach(function (group) {
+    document.querySelectorAll(".tiles, .values, .features, .stats, .hero-content").forEach(function (group) {
       group.querySelectorAll(":scope > .reveal, :scope > .reveal-3d").forEach(function (el, i) {
         el.style.transitionDelay = i * 0.12 + "s";
       });
