@@ -1,9 +1,8 @@
 (function () {
   "use strict";
 
-  // ---- Business details: edit these in one place ----
-  var PHONE = "+383 45 949 002";
-  var WHATSAPP = "38345949002";      // same number, digits only, for WhatsApp
+  // WhatsApp number (digits only) used to add the greeting in the visitor's language.
+  var WHATSAPP = "38345949002";
 
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var root = document.documentElement;
@@ -200,12 +199,7 @@
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
 
-  // ---------------- Business details ----------------
-  var tel = "tel:" + PHONE.replace(/\s+/g, "");
-  document.querySelectorAll("[data-phone]").forEach(function (a) {
-    a.href = tel;
-    if (!a.dataset.i18n && !a.children.length) a.textContent = PHONE;
-  });
+  // Phone numbers and WhatsApp links are written directly in the HTML.
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
   // ---------------- Curtain & page transitions ----------------
@@ -546,7 +540,7 @@
     en: "Hello Santos, I would like to reserve a table.",
     bs: "Zdravo Santos, želim rezervisati sto."
   };
-  var waLinks = document.querySelectorAll('[data-wa], a[href="kontakt.html#rezervo"]');
+  var waLinks = document.querySelectorAll("[data-wa]");
   function updateWhatsApp() {
     var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(GREETING[lang] || GREETING.sq);
     waLinks.forEach(function (a) {

@@ -19,7 +19,7 @@ by `.github/workflows/pages.yml` on every push.
 | --- | --- |
 | Google reviews (name, rating, date, text) | `assets/reviews.js` — 3+ reviews show as a 3D carousel |
 | Menu (categories, dishes, prices) | `assets/menu.js` — transcribed from the printed menu (soups, starters, salads, pickles, grill, specialities, roast meat, wines); add more categories by copying a block |
-| Phone + WhatsApp number | `PHONE` and `WHATSAPP` at the top of `assets/main.js` (currently +383 45 949 002) |
+| Phone + WhatsApp number | +383 45 949 002 — written in the HTML pages (search for `38345949002` / `+383 45 949 002`) and `WHATSAPP` at the top of `assets/main.js` |
 | Opening hours | `Çdo ditë · 10:00 – 23:00` in the HTML files, and `hours.value` in `assets/main.js` (EN + BS) |
 | Photos | drop JPGs into `images/` with these names — each replaces a toned placeholder panel: `hero` (home header), `about`, `kitchen`, `reviews`, `contact` (page headers + home tiles), `interior`, `dish` (side-by-side sections), `band` (quote strips). Landscape, ~2000px wide works best. |
 
