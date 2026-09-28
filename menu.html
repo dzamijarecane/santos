@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kuzhina — Santos · Reçan, Prizren</title>
-  <meta name="description" content="Kuzhina dhe menuja e restorantit Santos në Reçan, Prizren.">
+  <title>Menuja — Santos · Reçan, Prizren</title>
+  <meta name="description" content="Menuja e restorantit Santos në Reçan, Prizren: sallata, paragjella, skara, specialitete me porosi, mishra të pjekur dhe verëra.">
   <meta name="theme-color" content="#0e0e0e">
-  <meta property="og:title" content="Kuzhina — Santos · Reçan, Prizren">
-  <meta property="og:description" content="Kuzhina dhe menuja e restorantit Santos në Reçan, Prizren.">
+  <meta property="og:title" content="Menuja — Santos · Reçan, Prizren">
+  <meta property="og:description" content="Menuja e restorantit Santos në Reçan, Prizren: sallata, paragjella, skara, specialitete me porosi, mishra të pjekur dhe verëra.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +30,8 @@
     <nav class="nav-links" aria-label="Main">
         <a href="index.html" data-i18n="nav.home">Kreu</a>
         <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
-        <a href="kuzhina.html" data-i18n="nav.kitchen" aria-current="page">Kuzhina</a>
-        <a href="menu.html" data-i18n="nav.menu">Menuja</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="menu.html" data-i18n="nav.menu" aria-current="page">Menuja</a>
         <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
         <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
     </nav>
@@ -42,8 +42,8 @@
     <nav class="menu" aria-label="Mobile">
       <a href="index.html" data-i18n="nav.home">Kreu</a>
         <a href="rreth-nesh.html" data-i18n="nav.about">Rreth nesh</a>
-        <a href="kuzhina.html" data-i18n="nav.kitchen" aria-current="page">Kuzhina</a>
-        <a href="menu.html" data-i18n="nav.menu">Menuja</a>
+        <a href="kuzhina.html" data-i18n="nav.kitchen">Kuzhina</a>
+        <a href="menu.html" data-i18n="nav.menu" aria-current="page">Menuja</a>
         <a href="vleresimet.html" data-i18n="nav.reviews">Vlerësimet</a>
         <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
       <a href="kontakt.html#rezervo" class="btn btn-dark" data-i18n="cta.reserve">Rezervo një tavolinë</a>
@@ -52,55 +52,30 @@
 
   <main>
     <section class="hero page-hero">
-      <div class="media tone-2 hero-media"><img src="images/kitchen.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="media tone-3 hero-media"><img src="images/menu.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="eyebrow reveal" data-i18n="kitchenHero.eyebrow">Kuzhina</p>
-        <h1 class="split" data-i18n="kitchenHero.title">Arti i tavolinës</h1>
-        <p class="hero-sub reveal" data-i18n="kitchenHero.sub">E përgatitur me dorë, e shërbyer me kujdes.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container split-grid flip">
-        <div class="split-media reveal"><div class="media tone-3"><img src="images/dish.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
-        <div class="prose">
-          <p class="eyebrow reveal" data-i18n="philo.eyebrow">Filozofia</p>
-          <h2 class="split" data-i18n="philo.title">Thjeshtësi, freski, karakter</h2>
-          <p class="reveal" data-i18n="philo.p1">Besojmë se pjata më e mirë fillon me përbërësin e duhur. Prandaj zgjedhim produkte të freskëta, respektojmë stinën dhe i lëmë shijet të flasin vetë.</p>
-          <p class="reveal" data-i18n="philo.p2">Nga zgara te specialitetet e shtëpisë, çdo pjatë përgatitet në momentin që e porosisni — me durim, me mjeshtëri dhe me dashuri për zanatin.</p>
-        </div>
+        <p class="eyebrow reveal" data-i18n="menuHero.eyebrow">Menuja</p>
+        <h1 class="split" data-i18n="menuHero.title">Shijet e Santos</h1>
+        <p class="hero-sub reveal" data-i18n="menuHero.sub">Nga sallatat te specialitetet e shtëpisë — e gjithë menuja jonë në një vend.</p>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <nav class="menu-jump" id="menu-jump" aria-label="Menu sections"></nav>
+
+    <section class="section menu-full">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow reveal" data-i18n="exp.eyebrow">Përvojat</p>
-          <h2 class="split" data-i18n="exp.title">Për çdo rast, një tavolinë</h2>
-        </header>
-        <div class="features">
-          <div class="feature reveal"><svg class="icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="28" cy="28" r="15"/><circle cx="28" cy="28" r="10"/><path d="M7 12v10a3 3 0 0 0 3 3v19M10 12v8M13 12v10a3 3 0 0 1-3 3M46 12c-3 2-4 7-4 12h4v20"/></svg><h3 data-i18n="exp.t1">Drekë familjare</h3><p data-i18n="exp.d1">Tryeza të mëdha, porcione bujare dhe një ambient ku fëmijët e të rriturit ndihen mirë.</p></div>
-          <div class="feature reveal"><svg class="icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8h20l-1 12a9 9 0 0 1-18 0zM28 29v17M20 46h16M19 17h18"/></svg><h3 data-i18n="exp.t2">Darkë elegante</h3><p data-i18n="exp.d2">Dritë e butë, shërbim i vëmendshëm dhe pjata që e bëjnë mbrëmjen të veçantë.</p></div>
-          <div class="feature reveal"><svg class="icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M28 6c3 4 3 7 0 9-3-2-3-5 0-9zM24 19h8v27h-8zM14 46h28M17 27h-3v19M42 27h-3v19M15.5 23c1.5 1.5 1.5 3 0 4M40.5 23c1.5 1.5 1.5 3 0 4"/></svg><h3 data-i18n="exp.t3">Festime &amp; evente</h3><p data-i18n="exp.d3">Ditëlindje, fejesa, përvjetorë — organizojmë çdo detaj që festa juaj të jetë e paharrueshme.</p></div>
-          <div class="feature reveal"><svg class="icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22h26v9a12 12 0 0 1-12 12h-2a12 12 0 0 1-12-12zM38 25h3a5 5 0 0 1 0 10h-4M8 48h36M20 10c-2 3 2 5 0 8M26 8c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg><h3 data-i18n="exp.t4">Kafe &amp; ëmbëlsira</h3><p data-i18n="exp.d4">Një pushim i ëmbël gjatë ditës, me kafe të mirë dhe diçka të veçantë në anë.</p></div>
+        <div id="menu-root" class="menu-sections">
+          <div class="menu-empty">
+            <h3 data-i18n="menu.emptyTitle">Menuja ndryshon me stinën</h3>
+            <p data-i18n="menu.emptyText">Pjatat tona ndryshojnë sipas përbërësve më të mirë të ditës. Pyesni stafin tonë për specialitetet e sotme, ose na telefononi — me kënaqësi ju tregojmë.</p>
+            <a data-phone href="tel:+38300000000" class="btn btn-dark" data-i18n="cta.call">Na telefononi</a>
+          </div>
         </div>
+        <p class="menu-note" data-i18n="menu.note">Çmimet janë në euro (€). Pyesni stafin tonë për pjatat e ditës.</p>
       </div>
     </section>
 
-    <section class="section menu-teaser" id="menu">
-      <div class="container narrow">
-        <p class="eyebrow reveal" data-i18n="menu.eyebrow">Menuja</p>
-        <h2 class="split" data-i18n="menu.title">Shijet e Santos</h2>
-        <p class="lead reveal" data-i18n="menu.teaser">Mbi 90 pjata — sallata, paragjella, specialitete nga skara, mishra të pjekur dhe verëra të zgjedhura.</p>
-        <a href="menu.html" class="btn btn-dark reveal" data-i18n="menu.cta">Shiko menunë</a>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="media tone-2 band-media"><img src="images/band.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
-      <div class="hero-shade" aria-hidden="true"></div>
-      <p class="band-text split" data-i18n="band.3">“Gatimi është dashuri që mund ta shijosh.”</p>
-    </section>
     <section class="section cta">
       <div class="container cta-inner">
         <div>

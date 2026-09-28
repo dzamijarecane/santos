@@ -8,7 +8,8 @@ by `.github/workflows/pages.yml` on every push.
 | --- | --- |
 | Home | `index.html` |
 | About | `rreth-nesh.html` |
-| Kitchen & menu | `kuzhina.html` |
+| Kitchen | `kuzhina.html` |
+| Menu (all sections on one page) | `menu.html` |
 | Reviews | `vleresimet.html` |
 | Contact & reservations | `kontakt.html` |
 

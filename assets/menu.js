@@ -1,16 +1,32 @@
 /*
- * Menu shown on kuzhina.html — transcribed from the printed Santos menu.
+ * Menu shown on menu.html — transcribed from the printed Santos menu.
  *
- * Each category becomes a tab; each item a line with its price.
+ * Categories appear top to bottom in this order, each with a shortcut at the top of the page.
  * Text can be a plain string or { sq: "...", bs: "...", en: "..." } for each language.
  * To add a category, copy one block below and change the text and prices.
  */
 window.SANTOS_MENU = [
   {
-    category: { sq: "Supat", bs: "Čorbe", en: "Soups" },
+    category: { sq: "Sallatat", bs: "Salate", en: "Salads" },
     items: [
-      { name: { sq: "Paçe", bs: "Pače", en: "Pacha soup" }, price: "3.00 €" },
-      { name: { sq: "Çorbë me plançë", bs: "Škembe čorba", en: "Tripe soup" }, price: "3.50 €" }
+      { name: { sq: "Sallatë me domate", bs: "Paradajz salata", en: "Tomato salad" }, price: "2.00 €" },
+      { name: { sq: "Sallatë me tranguj", bs: "Krastavac salata", en: "Cucumber salad" }, price: "2.00 €" },
+      { name: { sq: "Sallatë me lakër", bs: "Kupus salata", en: "Cabbage salad" }, price: "2.00 €" },
+      { name: { sq: "Sallatë e gjelbër", bs: "Zelena salata", en: "Green salad" }, price: "2.00 €" },
+      { name: { sq: "Speca me hudhër", bs: "Paprike u bijelom luku", en: "Peppers in garlic" }, price: "2.00 €" },
+      { name: { sq: "Sallatë shope", bs: "Šopska salata", en: "Shopska salad" }, desc: { sq: "Sallatë e përzier me djathë", bs: "Miješana salata sa sirom", en: "Mixed salad with cheese" }, price: "2.50 €" },
+      { name: { sq: "Sallatë greke", bs: "Grčka salata", en: "Greek salad" }, price: "3.50 €" }
+    ]
+  },
+  {
+    category: { sq: "Turshitë", bs: "Turšije", en: "Pickles" },
+    items: [
+      { name: { sq: "Lakër turshi", bs: "Kiseli kupus", en: "Sour cabbage" }, price: "1.50 €" },
+      { name: { sq: "Speca me hudhër turshi", bs: "Barena paprika sa bijelim lukom", en: "Boiled peppers with garlic" }, price: "1.50 €" },
+      { name: { sq: "Turshi domate", bs: "Paradajz turšija", en: "Pickled tomatoes" }, price: "1.50 €" },
+      { name: { sq: "Turshi tranguj", bs: "Kiseli krastavci", en: "Pickled cucumbers" }, price: "1.50 €" },
+      { name: { sq: "Sallatë e përzier shtëpiake", bs: "Miješana domaća salata", en: "Mixed homemade salad" }, price: "2.00 €" },
+      { name: { sq: "Speca të mbushura me ajkë", bs: "Punjena paprika sa pavlakom", en: "Peppers stuffed with cream" }, price: "1.50 €" }
     ]
   },
   {
@@ -51,26 +67,10 @@ window.SANTOS_MENU = [
     ]
   },
   {
-    category: { sq: "Sallatat", bs: "Salate", en: "Salads" },
+    category: { sq: "Supat", bs: "Čorbe", en: "Soups" },
     items: [
-      { name: { sq: "Sallatë me domate", bs: "Paradajz salata", en: "Tomato salad" }, price: "2.00 €" },
-      { name: { sq: "Sallatë me tranguj", bs: "Krastavac salata", en: "Cucumber salad" }, price: "2.00 €" },
-      { name: { sq: "Sallatë me lakër", bs: "Kupus salata", en: "Cabbage salad" }, price: "2.00 €" },
-      { name: { sq: "Sallatë e gjelbër", bs: "Zelena salata", en: "Green salad" }, price: "2.00 €" },
-      { name: { sq: "Speca me hudhër", bs: "Paprike u bijelom luku", en: "Peppers in garlic" }, price: "2.00 €" },
-      { name: { sq: "Sallatë shope", bs: "Šopska salata", en: "Shopska salad" }, desc: { sq: "Sallatë e përzier me djathë", bs: "Miješana salata sa sirom", en: "Mixed salad with cheese" }, price: "2.50 €" },
-      { name: { sq: "Sallatë greke", bs: "Grčka salata", en: "Greek salad" }, price: "3.50 €" }
-    ]
-  },
-  {
-    category: { sq: "Turshitë", bs: "Turšije", en: "Pickles" },
-    items: [
-      { name: { sq: "Lakër turshi", bs: "Kiseli kupus", en: "Sour cabbage" }, price: "1.50 €" },
-      { name: { sq: "Speca me hudhër turshi", bs: "Barena paprika sa bijelim lukom", en: "Boiled peppers with garlic" }, price: "1.50 €" },
-      { name: { sq: "Turshi domate", bs: "Paradajz turšija", en: "Pickled tomatoes" }, price: "1.50 €" },
-      { name: { sq: "Turshi tranguj", bs: "Kiseli krastavci", en: "Pickled cucumbers" }, price: "1.50 €" },
-      { name: { sq: "Sallatë e përzier shtëpiake", bs: "Miješana domaća salata", en: "Mixed homemade salad" }, price: "2.00 €" },
-      { name: { sq: "Speca të mbushura me ajkë", bs: "Punjena paprika sa pavlakom", en: "Peppers stuffed with cream" }, price: "1.50 €" }
+      { name: { sq: "Paçe", bs: "Pače", en: "Pacha soup" }, price: "3.00 €" },
+      { name: { sq: "Çorbë me plançë", bs: "Škembe čorba", en: "Tripe soup" }, price: "3.50 €" }
     ]
   },
   {
