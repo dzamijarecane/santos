@@ -301,8 +301,8 @@ p { margin: 0 0 1.1em; }
 .dish { padding: 1.3rem 0; border-bottom: 1px solid var(--line); animation: dishIn 0.6s var(--ease-out) both; }
 .dish-top { display: flex; align-items: baseline; gap: 1rem; }
 .dish-name { font-family: var(--head); font-weight: 600; font-size: 1.4rem; text-transform: uppercase; }
-.dish-dots { flex: 1; border-bottom: 1px dotted #c9c2b6; transform: translateY(-5px); }
-.dish-price { font-family: var(--head); font-weight: 600; font-size: 1.3rem; }
+.dish-dots { flex: 1; min-width: 1.5rem; border-bottom: 1px dotted #c9c2b6; transform: translateY(-5px); }
+.dish-price { font-family: var(--head); font-weight: 600; font-size: 1.3rem; white-space: nowrap; }
 .dish p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; }
 @keyframes dishIn { from { opacity: 0; transform: translateY(12px); } }
 .menu-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin: 2.4rem 0 0; }
@@ -406,6 +406,10 @@ p { margin: 0 0 1.1em; }
   .details > div { grid-template-columns: 1fr; gap: 0.2rem; }
   .form { grid-template-columns: 1fr; }
   .hero-cta .btn, .cta .row .btn { flex: 1 1 100%; }
+  .menu-tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; margin: 0 -1rem 2.2rem; padding: 0 1rem 0.4rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .menu-tabs::-webkit-scrollbar { display: none; }
+  .menu-tabs button { flex: none; }
+  .dish-name { font-size: 1.25rem; }
   .carousel { width: 280px; height: 400px; margin: -200px 0 0 -140px; }
   .footer-grid { grid-template-columns: 1fr; }
 }

@@ -7,6 +7,13 @@
  */
 window.SANTOS_MENU = [
   {
+    category: { sq: "Supat", bs: "Čorbe", en: "Soups" },
+    items: [
+      { name: { sq: "Paçe", bs: "Pače", en: "Pacha soup" }, price: "3.00 €" },
+      { name: { sq: "Çorbë me plançë", bs: "Škembe čorba", en: "Tripe soup" }, price: "3.50 €" }
+    ]
+  },
+  {
     category: { sq: "Paragjellat e ftohta", bs: "Hladna predjela", en: "Cold starters" },
     items: [
       { name: { sq: "Kaçkavall", bs: "Kaškaval", en: "Kashkaval (hard cheese)" }, price: "2.00 €" },
@@ -24,6 +31,26 @@ window.SANTOS_MENU = [
     ]
   },
   {
+    category: { sq: "Paragjellat e nxehta", bs: "Topla predjela", en: "Hot starters" },
+    items: [
+      { name: { sq: "Vezë në sy", bs: "Jaja na oko", en: "Fried eggs" }, price: "2.50 €" },
+      { name: { sq: "Omletë me djathë", bs: "Omlet sa sirom", en: "Cheese omelette" }, price: "3.50 €" },
+      { name: { sq: "Omletë me proshutë", bs: "Omlet sa pršutom", en: "Omelette with smoked ham" }, price: "3.50 €" },
+      { name: { sq: "Omletë me kërpudha", bs: "Omlet sa pečurkama", en: "Mushroom omelette" }, price: "3.50 €" },
+      { name: { sq: "Vezë me tamël (kajganë)", bs: "Kajgana (jaja sa mlijekom)", en: "Scrambled eggs with milk" }, price: "2.00 €" },
+      { name: { sq: "Kaçkavall i fërguar", bs: "Pohovani kaškaval", en: "Breaded kashkaval" }, price: "4.00 €" },
+      { name: { sq: "Tru të fërguar", bs: "Pohovani mozak", en: "Breaded brains" }, price: "6.50 €" },
+      { name: { sq: "Tru në mënyrë rome", bs: "Mozak na ciganski način", en: "Brains, Roma style" }, price: "9.00 €" },
+      { name: { sq: "Plançë në vaj", bs: "Prženi škembići", en: "Fried tripe" }, price: "5.50 €" },
+      { name: { sq: "Plançë të fërguara", bs: "Pohovani škembići", en: "Breaded tripe" }, price: "5.50 €" },
+      { name: { sq: "Kërpudha të freskëta me gjalpë në zgarë", bs: "Svježe pečurke sa puterom na žaru", en: "Grilled fresh mushrooms with butter" }, price: "4.50 €" },
+      { name: { sq: "Shampinjonë me kajmak e proshutë në zgarë", bs: "Šampinjoni sa kajmakom i pršutom na žaru", en: "Grilled mushrooms with kajmak and smoked ham" }, price: "7.50 €" },
+      { name: { sq: "Speca të fërguar", bs: "Pohovana paprika", en: "Breaded peppers" }, price: "1.50 €" },
+      { name: { sq: "Speca të mbushur të fërguar", bs: "Punjena pohovana paprika", en: "Stuffed breaded peppers" }, price: "2.50 €" },
+      { name: { sq: "Noazeti vjeneze – \u201cBesnik Shala\u201d", bs: "Bečki noazeti – \u201cBesnik Shala\u201d", en: "Viennese noisettes – \u201cBesnik Shala\u201d" }, price: "6.00 € / 10.00 €" }
+    ]
+  },
+  {
     category: { sq: "Sallatat", bs: "Salate", en: "Salads" },
     items: [
       { name: { sq: "Sallatë me domate", bs: "Paradajz salata", en: "Tomato salad" }, price: "2.00 €" },
@@ -33,6 +60,49 @@ window.SANTOS_MENU = [
       { name: { sq: "Speca me hudhër", bs: "Paprike u bijelom luku", en: "Peppers in garlic" }, price: "2.00 €" },
       { name: { sq: "Sallatë shope", bs: "Šopska salata", en: "Shopska salad" }, desc: { sq: "Sallatë e përzier me djathë", bs: "Miješana salata sa sirom", en: "Mixed salad with cheese" }, price: "2.50 €" },
       { name: { sq: "Sallatë greke", bs: "Grčka salata", en: "Greek salad" }, price: "3.50 €" }
+    ]
+  },
+  {
+    category: { sq: "Turshitë", bs: "Turšije", en: "Pickles" },
+    items: [
+      { name: { sq: "Lakër turshi", bs: "Kiseli kupus", en: "Sour cabbage" }, price: "1.50 €" },
+      { name: { sq: "Speca me hudhër turshi", bs: "Barena paprika sa bijelim lukom", en: "Boiled peppers with garlic" }, price: "1.50 €" },
+      { name: { sq: "Turshi domate", bs: "Paradajz turšija", en: "Pickled tomatoes" }, price: "1.50 €" },
+      { name: { sq: "Turshi tranguj", bs: "Kiseli krastavci", en: "Pickled cucumbers" }, price: "1.50 €" },
+      { name: { sq: "Sallatë e përzier shtëpiake", bs: "Miješana domaća salata", en: "Mixed homemade salad" }, price: "2.00 €" },
+      { name: { sq: "Speca të mbushura me ajkë", bs: "Punjena paprika sa pavlakom", en: "Peppers stuffed with cream" }, price: "1.50 €" }
+    ]
+  },
+  {
+    category: { sq: "Nga skara", bs: "Sa roštilja", en: "From the grill" },
+    items: [
+      { name: { sq: "Pleskavicë", bs: "Pljeskavica", en: "Pljeskavica (grilled meat patty)" }, price: "6.50 €" },
+      { name: { sq: "Bombice", bs: "Bombica", en: "Bombica (stuffed meatballs)" }, price: "7.00 €" },
+      { name: { sq: "Qofte me kaçkavall në kajmak", bs: "Uštipci na kajmaku", en: "Meat patties with kashkaval in kajmak" }, price: "7.00 €" },
+      { name: { sq: "Gjevrek prej mishi në kajmak", bs: "Dževreci sa kajmakom", en: "Meat rolls in kajmak (dževrek)" }, price: "7.00 €" },
+      { name: { sq: "Mish viçi në hell", bs: "Teleći ražnjići", en: "Veal skewers" }, price: "11.00 €" },
+      { name: { sq: "Mish pule në hell", bs: "Pileći ražnjići", en: "Chicken skewers" }, price: "6.00 €" },
+      { name: { sq: "File pule", bs: "Pileći file", en: "Chicken fillet" }, price: "6.00 €" },
+      { name: { sq: "File viçi", bs: "Teleći file", en: "Veal fillet" }, price: "7.50 € / 13.00 €" },
+      { name: { sq: "Ramstek", bs: "Ramstek", en: "Rump steak" }, price: "7.00 € / 12.00 €" },
+      { name: { sq: "Biftek", bs: "Biftek", en: "Beef steak" }, price: "15.50 €" },
+      { name: { sq: "Bërxollë (kotletë)", bs: "Kotlet", en: "Chop (cutlet)" }, price: "8.00 € / 14.00 €" }
+    ]
+  },
+  {
+    category: { sq: "Specialitete me porosi", bs: "Specijaliteti po porudžbini", en: "Specialities to order" },
+    items: [
+      {
+        name: { sq: "File \u201cSkënderbeg\u201d", bs: "Skenderbegova šnicla", en: "\u201cSkenderbeg\u201d fillet" },
+        desc: { sq: "Kaçkavall, proshutë, shampinjonë", bs: "Kaškaval, pršut, šampinjoni", en: "Kashkaval, smoked ham, mushrooms" },
+        price: "7.00 € / 11.50 €"
+      },
+      { name: { sq: "Ramstek \u201cBulanzhe\u201d", bs: "Ramstek \u201cBulanže\u201d", en: "Rump steak \u201cBoulangère\u201d" }, price: "7.00 € / 11.50 €" },
+      { name: { sq: "File pule të fërguar", bs: "Pohovana piletina", en: "Breaded chicken" }, price: "4.00 € / 7.00 €" },
+      { name: { sq: "File pule e mbushur e fërguar", bs: "Pohovana rolovana piletina", en: "Stuffed breaded chicken roll" }, price: "6.00 € / 10.00 €" },
+      { name: { sq: "File pule e mbushur e skuqur", bs: "Pržena rolovana piletina", en: "Stuffed fried chicken roll" }, price: "6.00 € / 10.00 €" },
+      { name: { sq: "Mish pule me salcë të bardhë me kërpudha", bs: "Piletina sa pečurkama u bijelom sosu", en: "Chicken with mushrooms in white sauce" }, price: "5.00 € / 8.00 €" },
+      { name: { sq: "Noazeti mish pule", bs: "Pileći noazeti", en: "Chicken noisettes" }, price: "5.00 € / 8.00 €" }
     ]
   },
   {

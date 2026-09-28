@@ -516,7 +516,10 @@
     function pick(label) { return typeof label === "string" ? label : (label[lang] || label.sq || label.en || ""); }
     function show(idx) {
       current = idx;
-      tabs.querySelectorAll("button").forEach(function (b, i) { b.setAttribute("aria-selected", String(i === idx)); });
+      tabs.querySelectorAll("button").forEach(function (b, i) {
+        b.setAttribute("aria-selected", String(i === idx));
+        if (i === idx && tabs.scrollWidth > tabs.clientWidth) tabs.scrollTo({ left: b.offsetLeft - tabs.clientWidth / 2 + b.offsetWidth / 2, behavior: "smooth" });
+      });
       list.textContent = "";
       menu[idx].items.forEach(function (it, i) {
         var d = document.createElement("div");
